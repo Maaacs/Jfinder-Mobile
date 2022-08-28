@@ -4,7 +4,7 @@
     <gradient
         android:startColor="@color/azul"
         android:endColor="@color/dazzled_Blue"
-        android:angle="18"
+        android:angle="90"
         />
     <!--<solid android:color="@color/verde"/>-->
     <!--android:endColor="@color/verdeMaisclaro"-->

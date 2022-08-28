@@ -53,4 +53,5 @@ public class NavigationMenu extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
+
 }
