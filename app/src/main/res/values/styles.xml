@@ -4,7 +4,7 @@
     
     <style name="ContainerComponents">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">350dp</item>
+        <item name="android:layout_height">370dp</item>
         <item name="android:background">@drawable/container_components</item>
         <item name="android:layout_margin">19dp</item>
     </style>
@@ -13,6 +13,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/edit_text</item>
+        <item name="android:maxLength">25</item> <!--limite de caracteres-->
         <item name="android:padding">10dp</item>
         <item name="android:textSize">15sp</item>
         <item name="android:layout_marginLeft">40dp</item>

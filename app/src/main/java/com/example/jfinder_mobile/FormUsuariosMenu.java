@@ -2,14 +2,21 @@ package com.example.jfinder_mobile;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
-public class LoginActivity extends AppCompatActivity {
+public class FormUsuariosMenu extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        getSupportActionBar().hide(); // remove a barra de título do app
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_usuarios_menu);
+
+        Intent myIntent = getIntent();
+
+
     }
 }

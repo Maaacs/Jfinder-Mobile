@@ -2,5 +2,11 @@
     <string name="app_name">Jfinder-Mobile</string>
     <string name="entrar">Entrar</string>
     <string name="sair">Sair</string>
-    <string name="jfinder">Jfinder</string>
+    <string name="Jfinder">Jfinder</string>
+    <string name="textview">textview</string>
+    <string name="escreva_aqui_o_seu_lembrete">escreva_aqui_o_seu_lembrete</string>
+    <string name="salvar">salvar</string>
+    <string name="apagar">apagar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
