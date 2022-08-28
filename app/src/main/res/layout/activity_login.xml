@@ -25,7 +25,8 @@ o celular-->
             android:src="@drawable/folder"
             app2:layout_constraintEnd_toEndOf="parent"
             app2:layout_constraintStart_toStartOf="parent"
-            app2:layout_constraintTop_toTopOf="parent" />
+            app2:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="TODO" />
 
         <View
             android:id="@+id/containerComponents"
@@ -43,17 +44,20 @@ o celular-->
             android:src="@drawable/usuario"
             app2:layout_constraintEnd_toEndOf="@+id/containerComponents"
             app2:layout_constraintStart_toStartOf="@+id/containerComponents"
-            app2:layout_constraintTop_toTopOf="@+id/containerComponents" />
+            app2:layout_constraintTop_toTopOf="@+id/containerComponents"
+            android:contentDescription="TODO" />
 
         <EditText
             android:id="@+id/edit_usuario"
             style="@style/Edit_Text"
-            android:drawableRight="@drawable/user_account"
-            android:hint="Usuario"
+            android:drawableEnd="@drawable/user_account"
+            android:hint="@string/usuario"
             android:inputType="text"
+            android:minHeight="48dp"
             app2:layout_constraintEnd_toEndOf="@+id/containerComponents"
             app2:layout_constraintEnd_toStartOf="@id/containerComponents"
-            app2:layout_constraintTop_toBottomOf="@+id/logoUsuario" />
+            app2:layout_constraintTop_toBottomOf="@+id/logoUsuario"
+            android:autofillHints="" />
 
         <EditText
             android:id="@+id/edit_senha"
@@ -61,6 +65,7 @@ o celular-->
             android:drawableRight="@drawable/senha_account"
             android:hint="Senha"
             android:inputType="numberPassword"
+            android:minHeight="48dp"
             app2:layout_constraintEnd_toEndOf="@+id/containerComponents"
             app2:layout_constraintEnd_toStartOf="@id/containerComponents"
             app2:layout_constraintTop_toBottomOf="@+id/edit_usuario" />

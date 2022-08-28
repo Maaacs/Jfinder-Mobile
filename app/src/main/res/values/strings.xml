@@ -19,4 +19,8 @@
     <string name="todo">TODO</string>
     <string name="relatorioUsuarios">Usuarios</string>
     <string name="relatorioDocumentos">Documentos</string>
+
+    <string name="descricao">Aplicação de gerenciamento de Usuários e Documentos. A aplicação contém ferramentas para cadastro, remoção, alteração e consulta de documentos e usuários em um banco de dados.</string>
+    <string name="usuario">Usuario</string>
+
 </resources>
