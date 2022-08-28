@@ -1,40 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<!--NestedScrool envelopa toda o conteiner para criar uma barra de rolagem na hora de virar
+o celular-->
+<androidx.core.widget.NestedScrollView xmlns:app2="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/cadastroUsuarioTela"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastroUsuario"
-    android:background="@drawable/background">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res/android"
+    tools:ignore="NamespaceTypo">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="84dp"
-        android:layout_height="74dp"
-        android:layout_marginTop="124dp"
-        android:contentDescription="@string/todo"
-        android:src="@drawable/folder"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/login_tela"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="67dp"
-        android:layout_height="44dp"
-        android:fontFamily="cursive"
-        android:text="@string/Jfinder"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:typeface="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
-        app:layout_constraintStart_toStartOf="@+id/logo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.272" />
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="84dp"
+            android:layout_height="74dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/folder"
+            />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="128dp"
+            android:layout_height="23dp"
+            android:text="@string/Usuarios"
+            android:textColor="@color/white"
+            app2:layout_constraintBottom_toBottomOf="parent"
+            app2:layout_constraintEnd_toEndOf="parent"
+            app2:layout_constraintHorizontal_bias="0.0"
+            app2:layout_constraintStart_toEndOf="@+id/logo"
+            app2:layout_constraintTop_toTopOf="parent"
+            app2:layout_constraintVertical_bias="0.036" />
+
+        <ImageView
+            android:id="@+id/logoUsuario"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="148dp"
+            android:src="@drawable/usuario"
+            app2:layout_constraintEnd_toEndOf="parent"
+            app2:layout_constraintHorizontal_bias="0.498"
+            app2:layout_constraintStart_toStartOf="parent"
+            app2:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/nome"
+            style="@style/Edit_Text"
+            android:layout_marginTop="264dp"
+            android:autofillHints=""
+            android:hint="@string/nome"
+            android:inputType="text"
+            android:minHeight="48dp"
+            app2:layout_constraintEnd_toEndOf="parent"
+            app2:layout_constraintStart_toStartOf="parent"
+            app2:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/sobrenome"
+            style="@style/Edit_Text"
+            android:hint="@string/sobrenome"
+            android:inputType="text"
+            android:minHeight="48dp"
+            app2:layout_constraintEnd_toEndOf="parent"
+            app2:layout_constraintStart_toStartOf="parent"
+            app2:layout_constraintTop_toBottomOf="@+id/nome" />
+
+        <EditText
+            android:id="@+id/cpf"
+            style="@style/Edit_Text"
+            android:hint="@string/cpf"
+            android:inputType="number"
+            android:minHeight="48dp"
+            app2:layout_constraintEnd_toEndOf="parent"
+            app2:layout_constraintStart_toStartOf="parent"
+            app2:layout_constraintTop_toBottomOf="@+id/sobrenome" />
+
+        <EditText
+            android:id="@+id/cargo"
+            style="@style/Edit_Text"
+            android:hint="@string/cargo"
+            android:inputType="text"
+            android:minHeight="48dp"
+            app2:layout_constraintEnd_toEndOf="parent"
+            app2:layout_constraintStart_toStartOf="parent"
+            app2:layout_constraintTop_toBottomOf="@+id/cpf" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/botao_entrar"
+            style="@style/Entrar_button"
+            android:layout_marginTop="24dp"
+            android:text="@string/cadastrar"
+            app2:layout_constraintBaseline_toTopOf="parent"
+            app2:layout_constraintEnd_toEndOf="parent"
+            app2:layout_constraintStart_toStartOf="parent"
+            app2:layout_constraintTop_toBottomOf="@+id/cargo" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cadastrar"
+            android:textColor="@color/white"
+            app2:layout_constraintBottom_toBottomOf="parent"
+            app2:layout_constraintEnd_toEndOf="parent"
+            app2:layout_constraintHorizontal_bias="0.501"
+            app2:layout_constraintStart_toStartOf="parent"
+            app2:layout_constraintTop_toBottomOf="@+id/logoUsuario"
+            app2:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--fechamento do envelopamento-->
+</androidx.core.widget.NestedScrollView>
+
+

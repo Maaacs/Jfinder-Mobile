@@ -1,113 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/azul"
-    tools:context=".UsuariosFragment"
-    tools:ignore="NamespaceTypo">
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/menu_usuarios"
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background">
+        android:background="@color/azul"
+        tools:context=".UsuariosFragment"
+        tools:ignore="NamespaceTypo">
 
 
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="84dp"
-            android:layout_height="74dp"
-            android:contentDescription="@string/todo"
-            android:src="@drawable/folder"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="128dp"
-            android:layout_height="23dp"
-            android:text="@string/Usuarios"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.343"
-            app:layout_constraintStart_toStartOf="@+id/logo"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.042" />
-
-        <Button
-            android:id="@+id/cadastrar"
-            style="@style/BotoesMenu"
-
-            android:drawableTop="@drawable/adduser"
-            android:text="@string/cadastrar"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.108"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.376" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/menu_usuarios"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background">
 
 
-        <Button
-            android:id="@+id/remover"
-            style="@style/BotoesMenu"
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="84dp"
+                android:layout_height="74dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/folder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                />
 
-            android:drawableTop="@drawable/removerusuario"
-            android:text="@string/remover"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.876"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.376" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="128dp"
+                android:layout_height="23dp"
+                android:text="@string/Usuarios"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.343"
+                app:layout_constraintStart_toStartOf="@+id/logo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.042" />
 
-        <Button
-            android:id="@+id/buscar"
-            style="@style/BotoesMenu"
+            <Button
+                android:id="@+id/cadastrar"
+                style="@style/BotoesMenu"
 
-            android:drawableTop="@drawable/buscarusuario"
-            android:text="@string/buscar"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.108"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.781" />
-
-        <Button
-            android:id="@+id/alterar"
-            style="@style/BotoesMenu"
-
-            android:drawableTop="@drawable/alterarusuario"
-            android:text="@string/alterar"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.876"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.781" />
-
-        <ImageView
-            android:id="@+id/sair"
-            android:layout_width="26dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="20dp"
-            android:onClick="@string/sair"
-            android:src="@drawable/logout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.92"
-            app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toTopOf="parent" />
+                android:drawableTop="@drawable/adduser"
+                android:text="@string/cadastrar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.108"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.376" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/remover"
+                style="@style/BotoesMenu"
 
-</FrameLayout>
+                android:drawableTop="@drawable/removerusuario"
+                android:text="@string/remover"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.876"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.376" />
+
+            <Button
+                android:id="@+id/buscar"
+                style="@style/BotoesMenu"
+
+                android:drawableTop="@drawable/buscarusuario"
+                android:text="@string/buscar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.108"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.781" />
+
+            <Button
+                android:id="@+id/alterar"
+                style="@style/BotoesMenu"
+
+                android:drawableTop="@drawable/alterarusuario"
+                android:text="@string/alterar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.876"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.781" />
+
+            <ImageView
+                android:id="@+id/sair"
+                android:layout_width="26dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:onClick="@string/sair"
+                android:src="@drawable/logout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.92"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
