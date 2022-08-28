@@ -59,4 +59,14 @@
 
     </style>
 
+    <style name="BotoesMenu">
+        <item name="android:layout_width">144dp</item>
+        <item name="android:layout_height">154dp</item>
+        <item name="backgroundTint">@color/opaco</item>
+        <item name="android:textColor">#673AB7</item>
+        <item name="android:background">@drawable/botoesmenu_components</item>
+
+    </style>
+
+
 </resources>
