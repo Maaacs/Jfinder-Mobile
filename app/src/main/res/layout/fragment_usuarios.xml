@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/azul"
-    tools:context=".UsuariosFragment">
+    tools:context=".UsuariosFragment"
+    tools:ignore="NamespaceTypo">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -13,6 +14,30 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background">
+
+
+        <ImageView
+            android:layout_width="84dp"
+            android:layout_height="74dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/folder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="128dp"
+            android:layout_height="23dp"
+            android:text="@string/Usuarios"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.296"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.043" />
 
         <Button
             android:id="@+id/cadastrar"
@@ -25,8 +50,7 @@
             app:layout_constraintHorizontal_bias="0.108"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.376"
-            />
+            app:layout_constraintVertical_bias="0.376" />
 
 
         <Button
