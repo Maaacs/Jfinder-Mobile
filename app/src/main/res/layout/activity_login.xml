@@ -33,7 +33,7 @@ o celular-->
             style="@style/ContainerComponents"
             app2:layout_constraintEnd_toEndOf="parent"
             app2:layout_constraintStart_toStartOf="parent"
-            app2:layout_constraintTop_toBottomOf="@id/nome_jfinder" />
+            app2:layout_constraintTop_toBottomOf="@id/logo" />
 
 
         <ImageView
@@ -116,10 +116,30 @@ o celular-->
             style="@style/Text_Jfinder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="168dp"
+            android:fontFamily="cursive"
             android:text="@string/Jfinder"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:typeface="normal"
             app2:layout_constraintEnd_toEndOf="parent"
+            app2:layout_constraintHorizontal_bias="0.53"
             app2:layout_constraintStart_toStartOf="parent"
-            app2:layout_constraintTop_toBottomOf="@+id/logo" />
+            app2:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/sobre"
+            android:layout_width="17dp"
+            android:layout_height="14dp"
+            android:backgroundTint="#FFFFFF"
+            android:onClick="sobre"
+            app2:layout_constraintBottom_toBottomOf="parent"
+            app2:layout_constraintEnd_toEndOf="parent"
+            app2:layout_constraintHorizontal_bias="0.959"
+            app2:layout_constraintStart_toStartOf="parent"
+            app2:layout_constraintTop_toTopOf="parent"
+            app2:layout_constraintVertical_bias="0.022"
+            app2:srcCompat="@android:drawable/ic_dialog_info" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,5 +10,6 @@ public class Sobre extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sobre);
+        getSupportActionBar().hide(); // esconde a barra de título do app (toolbar)
     }
 }
