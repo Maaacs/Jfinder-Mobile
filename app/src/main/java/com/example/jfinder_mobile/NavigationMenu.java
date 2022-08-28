@@ -34,9 +34,8 @@ public class NavigationMenu extends AppCompatActivity {
                 case R.id.documentos_menu:
                     replaceFragment(new DocumentosFragment());
                     break;
-                case R.id.sair_menu:
-                    replaceFragment(new SairFragment());
-                    /*setContentView(R.layout.activity_login);*/
+                case R.id.relatorios_menu:
+                    replaceFragment(new RelatoriosFragment());
                     break;
             }
 

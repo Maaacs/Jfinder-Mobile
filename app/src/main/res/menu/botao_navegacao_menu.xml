@@ -11,7 +11,7 @@
         android:icon="@drawable/documentos"
         android:title="Documentos" />
     <item
-        android:id="@+id/sair_menu"
-        android:icon="@drawable/logout"
-        android:title="Sair" />
+        android:id="@+id/relatorios_menu"
+        android:icon="@drawable/relatorios"
+        android:title="Relatorios" />
 </menu>
