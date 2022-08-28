@@ -1,6 +1,4 @@
-# Jfinder-Mobile
-
-Inciando o Projeto
+## 🖥 Preview
 
 ![Presentation](https://user-images.githubusercontent.com/56925726/187089525-6dbb281d-1451-428b-907b-1a66d2fb70d7.png)
 ![Login](https://user-images.githubusercontent.com/56925726/187088405-273eae4a-47e8-4af7-9ac0-4a2360c25441.png)
