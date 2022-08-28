@@ -4,6 +4,7 @@
     <string name="sair">Sair</string>
     <string name="Jfinder">Jfinder</string>
     <string name="Usuarios">Jfinder | Usuários</string>
+    <string name="Documentos">Jfinder | Documentos</string>
     <string name="textview">textview</string>
     <string name="escreva_aqui_o_seu_lembrete">escreva_aqui_o_seu_lembrete</string>
     <string name="salvar">salvar</string>
@@ -14,4 +15,5 @@
     <string name="remover">Remover</string>
     <string name="alterar">Alterar</string>
     <string name="buscar">Buscar</string>
+    <string name="todo">TODO</string>
 </resources>
