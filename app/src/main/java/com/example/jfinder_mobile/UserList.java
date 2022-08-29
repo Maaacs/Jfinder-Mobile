@@ -9,33 +9,43 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Currency;
 
-public class RemoverUsuario extends AppCompatActivity {
+
+public class UserList extends AppCompatActivity {
+
     RecyclerView recyclerView;
     ArrayList<String> nome, sobrenome, cpf, cargo;
-    BancoDeDados DB;
+    /*BancoDeDados DB;*/
+    UsuarioDAO DB;
     ReyclerUsuariosAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_remover_usuario);
-        DB = new BancoDeDados(this);
+        setContentView(R.layout.activity_user_list);
+
+        DB = new UsuarioDAO(this);
+        /*DB = new BancoDeDados(this);*/
         nome = new ArrayList<>();
         sobrenome = new ArrayList<>();
         cpf = new ArrayList<>();
+        cargo = new ArrayList<>();
+
         recyclerView = findViewById(R.id.recyclerview);
+
         adapter = new ReyclerUsuariosAdapter(this, nome, sobrenome, cpf, cargo);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        /*displaydata();*/
+        displaydata();
     }
 
-/*    private void displaydata()
+    private void displaydata()
     {
-        Cursor cursor = DB.getdata();
+        Cursor cursor = (Cursor) DB.todosUsuarios();
         if(cursor.getCount()==0)
         {
-            Toast.makeText(RemoverUsuario.this, "No Entry Exists", Toast.LENGTH_SHORT).show();
+            Toast.makeText(UserList.this, "No Entry Exists" , Toast.LENGTH_SHORT).show();
             return;
         }
         else
@@ -48,5 +58,5 @@ public class RemoverUsuario extends AppCompatActivity {
                 cargo.add(cursor.getString(3));
             }
         }
-    }*/
+    }
 }

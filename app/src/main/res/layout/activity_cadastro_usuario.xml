@@ -7,7 +7,7 @@ o celular-->
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:fillViewport="true"
-    xmlns:app="http://schemas.android.com/apk/res/android"
+    tools:context=".MainActivity"
     tools:ignore="NamespaceTypo">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -98,8 +98,9 @@ o celular-->
             app2:layout_constraintTop_toBottomOf="@+id/cpf" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/botao_entrar"
+            android:id="@+id/btnInsert"
             style="@style/Entrar_button"
+            android:onClick="bntInserir"
             android:layout_marginTop="24dp"
             android:text="@string/cadastrar"
             app2:layout_constraintBaseline_toTopOf="parent"
