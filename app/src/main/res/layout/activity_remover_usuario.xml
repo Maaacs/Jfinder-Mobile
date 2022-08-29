@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:app2="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true"
+
+    tools:ignore="NamespaceTypo">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/login_tela"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".MainActivity">
+
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="84dp"
+            android:layout_height="74dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/folder"
+            app2:layout_constraintBottom_toBottomOf="parent"
+            app2:layout_constraintEnd_toEndOf="parent"
+            app2:layout_constraintHorizontal_bias="0.0"
+            app2:layout_constraintStart_toStartOf="parent"
+            app2:layout_constraintTop_toTopOf="parent"
+            app2:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="128dp"
+            android:layout_height="23dp"
+            android:text="@string/Usuarios"
+            android:textColor="@color/white"
+            app2:layout_constraintBottom_toBottomOf="parent"
+            app2:layout_constraintEnd_toEndOf="parent"
+            app2:layout_constraintHorizontal_bias="0.0"
+            app2:layout_constraintStart_toEndOf="@+id/logo"
+            app2:layout_constraintTop_toTopOf="parent"
+            app2:layout_constraintVertical_bias="0.036" />
+
+        <ImageView
+            android:id="@+id/logoUsuario"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="84dp"
+            android:src="@drawable/usuario"
+            app2:layout_constraintEnd_toEndOf="parent"
+            app2:layout_constraintHorizontal_bias="0.498"
+            app2:layout_constraintStart_toStartOf="parent"
+            app2:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/botao_entrar"
+            style="@style/Entrar_button"
+            android:text="@string/remover"
+            app2:layout_constraintBaseline_toTopOf="parent"
+            app2:layout_constraintEnd_toEndOf="parent"
+            app2:layout_constraintStart_toStartOf="parent"
+            app2:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remover"
+            android:textColor="@color/white"
+            app2:layout_constraintBottom_toBottomOf="parent"
+            app2:layout_constraintEnd_toEndOf="parent"
+            app2:layout_constraintHorizontal_bias="0.501"
+            app2:layout_constraintStart_toStartOf="parent"
+            app2:layout_constraintTop_toBottomOf="@+id/logoUsuario"
+            app2:layout_constraintVertical_bias="0.0" />
+
+        <TableLayout
+
+            android:id="@+id/tableLayout"
+            android:layout_width="403dp"
+            android:layout_height="379dp"
+            android:layout_marginStart="2dp"
+            app2:layout_constraintBottom_toBottomOf="parent"
+            app2:layout_constraintEnd_toEndOf="parent"
+            app2:layout_constraintHorizontal_bias="0.333"
+            app2:layout_constraintStart_toStartOf="parent"
+            app2:layout_constraintTop_toBottomOf="@+id/textView3"
+            app2:layout_constraintVertical_bias="0.222">
+
+            <TableRow android:background="#0079D6">
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="6dp"
+                    android:text="Nome"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sobrenome"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="CPF"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cargo"
+                    android:textColor="@color/white" />
+
+            </TableRow>
+
+            <TableRow
+                android:background="@color/white"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Luan"
+                    android:textColor="@color/roxo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Santana"
+                    android:textColor="@color/roxo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="027351134"
+                    android:textColor="@color/roxo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cantor"
+                    android:textColor="@color/roxo" />
+
+            </TableRow>
+
+            <TableRow
+                android:background="@color/white"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Shakira"
+                    android:textColor="@color/roxo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Gomes"
+                    android:textColor="@color/roxo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="027351134"
+                    android:textColor="@color/roxo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cantora"
+                    android:textColor="@color/roxo" />
+
+            </TableRow>
+
+        </TableLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--NestedScrool envelopa toda o conteiner para criar uma barra de rolagem na hora de virar
+o celular-->
+<androidx.core.widget.NestedScrollView xmlns:app2="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res/android"
+    tools:ignore="NamespaceTypo">
 
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -110,3 +120,8 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
+
+    <!--fechamento do envelopamento-->
+</androidx.core.widget.NestedScrollView>
+
+
