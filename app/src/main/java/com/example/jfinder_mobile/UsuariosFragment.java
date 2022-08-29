@@ -1,6 +1,5 @@
 package com.example.jfinder_mobile;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -56,7 +55,7 @@ public class UsuariosFragment extends Fragment {
         cadastrarBotao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in = new Intent(getActivity(), cadastroTeste.class);
+                Intent in = new Intent(getActivity(), UsuarioCadastro.class);
                 startActivity(in);
             }
         });

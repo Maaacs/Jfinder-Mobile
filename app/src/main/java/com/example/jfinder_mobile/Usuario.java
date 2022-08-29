@@ -1,6 +1,8 @@
 package com.example.jfinder_mobile;
 
-public class Usuario {
+import java.io.Serializable;
+
+public class Usuario implements Serializable {
 
     //atributos
     private String primeiroNome;
@@ -8,10 +10,6 @@ public class Usuario {
     private String CPF;
     private String cargo;
 
-    //construtores
-    public Usuario() {
-
-    }
 
     public Usuario(String NovoPrimeiroNome, String NovoUltimoNome, String novoCPF, String NovoCargo) {
         this.setPrimeiroNome(NovoPrimeiroNome);
@@ -59,4 +57,11 @@ public class Usuario {
 
         this.cargo = cargo;
     }
+
+    public String toString() {
+        return "Nome: " + primeiroNome + "\nSobrenome: " + ultimoNome + "\nCPF: " + CPF +
+                "\nCargo: " + cargo;
+    }
+
+
 }

@@ -52,7 +52,7 @@ public class DocumentosFragment extends Fragment {
         cadastrarBotao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in = new Intent(getActivity(), CadastroUsuario.class);
+                Intent in = new Intent(getActivity(), UsuarioCadastro.class);
                 startActivity(in);
             }
         });

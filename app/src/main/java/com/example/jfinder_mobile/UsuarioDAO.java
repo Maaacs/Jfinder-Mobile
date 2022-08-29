@@ -38,8 +38,7 @@ public class UsuarioDAO {
             Cursor cursor = this.bancoDeDados.rawQuery(sqlQuery, null);
 
             while (cursor.moveToNext()) {
-                p = new Usuario(cursor.getString(0), cursor.getString(1), cursor.getString(2),
-                        cursor.getString(3));
+                p = new Usuario(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3));
                 listaUsuarios.add(p);
             }
             cursor.close();

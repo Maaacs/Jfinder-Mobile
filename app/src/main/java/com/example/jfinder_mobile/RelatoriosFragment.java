@@ -62,15 +62,16 @@ public class RelatoriosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_relatorios, container, false);
 
-        /*Button cadastrarBotao = (Button)view.findViewById(R.id.cadastrar);*/
+        Button usuariosReletorio = (Button)view.findViewById(R.id.relatoriousuarios);
         ImageView sair = (ImageView)view.findViewById(R.id.sair);
-       /* cadastrarBotao.setOnClickListener(new View.OnClickListener() {
+
+        usuariosReletorio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in = new Intent(getActivity(), CadastroUsuario.class);
+                Intent in = new Intent(getActivity(), UsuarioListar.class);
                 startActivity(in);
             }
-        });*/
+        });
 
         sair.setOnClickListener(new View.OnClickListener() {
             @Override

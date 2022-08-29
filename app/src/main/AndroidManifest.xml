@@ -14,19 +14,16 @@
         android:theme="@style/Theme.JfinderMobile"
         tools:targetApi="31">
         <activity
-            android:name=".UserList"
+            android:name=".UsuarioListar"
             android:exported="false" />
         <activity
-            android:name=".cadastroTeste"
+            android:name=".UsuarioCadastro"
             android:exported="false" />
         <activity
             android:name=".RemoverUsuario"
             android:exported="false" />
         <activity
             android:name=".Sobre"
-            android:exported="false" />
-        <activity
-            android:name=".CadastroUsuario"
             android:exported="false" />
         <activity
             android:name=".NavigationMenu"

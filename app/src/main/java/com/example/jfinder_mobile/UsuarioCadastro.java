@@ -4,20 +4,18 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class cadastroTeste extends AppCompatActivity {
+public class UsuarioCadastro extends AppCompatActivity {
     private AlertDialog alerta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastro_teste);
+        setContentView(R.layout.activity_usuario_cadastro);
     }
 
     public void bntInserir(View view){
@@ -38,7 +36,7 @@ public class cadastroTeste extends AppCompatActivity {
                     cpfTXT.getText().toString() + "\n Cargo: " + cargoTXT.getText().toString());
             builder.setPositiveButton("Positivo", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface arg0, int arg1) {
-                    Toast.makeText(cadastroTeste.this, "positivo=" + arg1, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UsuarioCadastro.this, "positivo=" + arg1, Toast.LENGTH_SHORT).show();
                 }
             });
 
@@ -47,7 +45,7 @@ public class cadastroTeste extends AppCompatActivity {
             alerta.show();
 
         }else {
-            Toast.makeText(cadastroTeste.this, "Erro ao cadastrar", Toast.LENGTH_SHORT).show();
+            Toast.makeText(UsuarioCadastro.this, "Erro ao cadastrar", Toast.LENGTH_SHORT).show();
         }
     }
 
