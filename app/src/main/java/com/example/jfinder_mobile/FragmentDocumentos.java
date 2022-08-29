@@ -11,37 +11,22 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link RelatoriosFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class RelatoriosFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+public class FragmentDocumentos extends Fragment {
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
+
     private String mParam1;
     private String mParam2;
 
-    public RelatoriosFragment() {
+    public FragmentDocumentos() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment RelatoriosFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static RelatoriosFragment newInstance(String param1, String param2) {
-        RelatoriosFragment fragment = new RelatoriosFragment();
+    public static FragmentDocumentos newInstance(String param1, String param2) {
+        FragmentDocumentos fragment = new FragmentDocumentos();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -60,15 +45,14 @@ public class RelatoriosFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_relatorios, container, false);
+        View view = inflater.inflate(R.layout.fragment_documentos, container, false);
 
-        Button usuariosReletorio = (Button)view.findViewById(R.id.relatoriousuarios);
+        Button cadastrarBotao = (Button)view.findViewById(R.id.cadastrar);
         ImageView sair = (ImageView)view.findViewById(R.id.sair);
-
-        usuariosReletorio.setOnClickListener(new View.OnClickListener() {
+        cadastrarBotao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in = new Intent(getActivity(), UsuarioListar.class);
+                Intent in = new Intent(getActivity(), UsuarioCadastro.class);
                 startActivity(in);
             }
         });

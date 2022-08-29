@@ -10,7 +10,7 @@ import android.content.Intent;
 import android.widget.ImageView;
 
 
-public class UsuariosFragment extends Fragment {
+public class FragmentUsuarios extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -19,12 +19,12 @@ public class UsuariosFragment extends Fragment {
     private String mParam2;
     private Button BotaoParaEntrar;
 
-    public UsuariosFragment() {
+    public FragmentUsuarios() {
         // Required empty public constructor
     }
 
-    public static UsuariosFragment newInstance(String param1, String param2) {
-        UsuariosFragment fragment = new UsuariosFragment();
+    public static FragmentUsuarios newInstance(String param1, String param2) {
+        FragmentUsuarios fragment = new FragmentUsuarios();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -63,7 +63,7 @@ public class UsuariosFragment extends Fragment {
         removerBotao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in = new Intent(getActivity(), RemoverUsuario.class);
+                Intent in = new Intent(getActivity(), UsuarioRemover.class);
                 startActivity(in);
             }
         });

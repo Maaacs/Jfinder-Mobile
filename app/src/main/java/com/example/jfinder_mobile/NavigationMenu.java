@@ -5,9 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 
 import com.example.jfinder_mobile.databinding.ActivityNavigationMenuBinding;
@@ -21,7 +19,7 @@ public class NavigationMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityNavigationMenuBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        replaceFragment(new UsuariosFragment());
+        replaceFragment(new FragmentUsuarios());
         getSupportActionBar().hide(); // esconde a barra de título do app (toolbar)
 
 
@@ -29,13 +27,13 @@ public class NavigationMenu extends AppCompatActivity {
 
             switch (item.getItemId()){
                 case R.id.usuarios_menu:
-                    replaceFragment(new UsuariosFragment());
+                    replaceFragment(new FragmentUsuarios());
                     break;
                 case R.id.documentos_menu:
-                    replaceFragment(new DocumentosFragment());
+                    replaceFragment(new FragmentDocumentos());
                     break;
                 case R.id.relatorios_menu:
-                    replaceFragment(new RelatoriosFragment());
+                    replaceFragment(new FragmentRelatorio());
                     break;
             }
 

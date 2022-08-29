@@ -21,6 +21,9 @@
         <entry key="app/src/main/res/layout/activity_remover_usuario.xml" value="0.27219202898550726" />
         <entry key="app/src/main/res/layout/activity_sobre.xml" value="0.27219202898550726" />
         <entry key="app/src/main/res/layout/activity_user_list.xml" value="0.2957427536231884" />
+        <entry key="app/src/main/res/layout/activity_usuario_alterar.xml" value="0.3546875" />
+        <entry key="app/src/main/res/layout/activity_usuario_buscar.xml" value="0.3546875" />
+        <entry key="app/src/main/res/layout/activity_usuario_remover.xml" value="0.3546875" />
         <entry key="app/src/main/res/layout/activity_usuarios_menu.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_documentos.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_relatorios.xml" value="0.3129528985507246" />
