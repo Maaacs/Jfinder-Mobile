@@ -50,6 +50,7 @@ public class FragmentUsuarios extends Fragment {
 
         Button cadastrarBotao = (Button)view.findViewById(R.id.cadastrar);
         Button removerBotao = (Button)view.findViewById(R.id.remover);
+        Button buscarBotao = (Button)view.findViewById(R.id.buscar);
         ImageView sair = (ImageView)view.findViewById(R.id.sair);
 
         cadastrarBotao.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +65,14 @@ public class FragmentUsuarios extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent in = new Intent(getActivity(), UsuarioRemover.class);
+                startActivity(in);
+            }
+        });
+
+        buscarBotao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(getActivity(), UsuarioBuscar.class);
                 startActivity(in);
             }
         });
