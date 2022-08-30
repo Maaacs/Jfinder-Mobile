@@ -79,7 +79,7 @@ o celular-->
 
         <EditText
             android:id="@+id/cpf"
-            style="@style/Edit_Text"
+            style="@style/Edit_Text_CPF"
             android:hint="@string/cpf"
             android:inputType="number"
             android:minHeight="48dp"
@@ -99,7 +99,7 @@ o celular-->
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnInsert"
-            style="@style/Entrar_button"
+            style="@style/botoes"
             android:onClick="bntInserir"
             android:layout_marginTop="24dp"
             android:text="@string/cadastrar"

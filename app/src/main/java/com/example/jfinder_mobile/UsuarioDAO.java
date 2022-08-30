@@ -18,6 +18,20 @@ public class UsuarioDAO {
     }
 
 
+
+    public Usuario buscarUsuario(String cpf) {
+        Usuario usr = null;
+        String sqlQuery = "SELECT * FROM Userdetails WHERE cpf = '" + cpf + "'";
+        Cursor cursor = this.bancoDeDados.rawQuery(sqlQuery, null);
+
+        if (cursor.moveToNext()) {
+            usr = new Usuario(cursor.getString(0), cursor.getString(1), cursor.getString(2),(cursor.getString(3)));
+        }
+        cursor.close();
+        return usr;
+    }
+
+
     public boolean addUsuario(Usuario p) {
         try {
             String sqlCmd = "INSERT INTO Userdetails VALUES ('" + p.getPrimeiroNome() + "', '" + p.getUltimoNome() + "', '" + p.getCPF() + "', '" + p.getCargo() + "')";
@@ -46,8 +60,16 @@ public class UsuarioDAO {
         } catch (Exception e) {
             return null;
         }
+    }
 
 
+    public void removerUsuario(String cpf) {
+        try {
+            String com = "DELETE FROM Userdetails WHERE cpf = '" + cpf + "'";
+            this.bancoDeDados.execSQL(com);
+        } catch (SQLException e) {
+            Log.e("JfinderBD", e.getMessage());
+        }
     }
 
 
