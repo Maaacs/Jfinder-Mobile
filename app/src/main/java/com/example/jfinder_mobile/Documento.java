@@ -9,8 +9,9 @@ public class Documento {
     private String interessado; //
     private String tipoDeArmazenamento;
     private String dataArquivamento;
+    private String localCompletoDeArmazenamento;
     private String descriçãoDocumento; //
-    private String localCompletoDeArmazenamento; //
+ //
 
     public Documento (){
 
@@ -18,14 +19,15 @@ public class Documento {
 
     //Construtor que inicializa o objeto Documento
     Documento(String NovoNumeroUnicoReferencia, String NovoTipoDeDocumento, String NovoInteressado, String NovoTipoDeArmazenamento, String NovoDataArquivamento,
-              String NovoDescriçãoDocumento, String NovoLocalCompletoDeArmazenamento){
+              String NovoLocalCompletoDeArmazenamento, String NovoDescriçãoDocumento){
         this.setNumeroUnicoReferencia(NovoNumeroUnicoReferencia);
-        this.setDataArquivamento(NovoDataArquivamento);
-        this.setInteressado(NovoInteressado);
         this.setTipoDeDocumento(NovoTipoDeDocumento);
-        this.setDescriçãoDocumento(NovoDescriçãoDocumento);
+        this.setInteressado(NovoInteressado);
         this.setTipoDeArmazenamento(NovoTipoDeArmazenamento);
+        this.setDataArquivamento(NovoDataArquivamento);
         this.setLocalCompletoDeArmazenamento(NovoLocalCompletoDeArmazenamento);
+        this.setDescriçãoDocumento(NovoDescriçãoDocumento);
+
     }
 
     //Get Set dos atributos
@@ -98,9 +100,9 @@ public class Documento {
 
 
     public String toString() {
-        return "Nº Referencia: " + numeroUnicoReferencia + "\n" + "\nTipo de Documento: " +tipoDeDocumento + "\n" +"\nInteressado: " + interessado + "\n" +
-                "\nTipo de Armazenamento: " + tipoDeArmazenamento + "\n" +"\nData de Arquivamento: " + dataArquivamento + "\n" +"\nDescrição: " + descriçãoDocumento + "\n" +
-                "\nLocal de Armazenamento: " + localCompletoDeArmazenamento;
+        return "Nº Referência: " + numeroUnicoReferencia + "\n" + "\nTipo de Documento: " +tipoDeDocumento + "\n" +"\nInteressado: " + interessado + "\n" +
+                "\nTipo de Armazenamento: " + tipoDeArmazenamento + "\n" +"\nData de Arquivamento: " + dataArquivamento + "\n" +"\nLocal de Armazenamento: " + localCompletoDeArmazenamento + "\n" +
+                "\nDescrição: " + descriçãoDocumento;
     }
 
 

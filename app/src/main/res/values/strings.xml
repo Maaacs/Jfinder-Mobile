@@ -1,29 +1,43 @@
 <resources>
-    <string name="app_name">Jfinder-Mobile</string>
-    <string name="entrar">Entrar</string>
-    <string name="sair">Sair</string>
-    <string name="Jfinder">Jfinder</string>
+
+    <!-- TODO: Usuarios-->
     <string name="Usuarios">Jfinder | Usuários</string>
-    <string name="Documentos">Jfinder | Documentos</string>
-    <string name="Relatorios">Jfinder | Relatórios</string>
-    <string name="textview">textview</string>
-    <string name="escreva_aqui_o_seu_lembrete">escreva_aqui_o_seu_lembrete</string>
-    <string name="salvar">salvar</string>
-    <string name="apagar">apagar</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="cadastrar">Cadastrar</string>
-    <string name="remover">Remover</string>
-    <string name="alterar">Alterar</string>
-    <string name="buscar">Buscar</string>
-    <string name="todo">TODO</string>
-    <string name="relatorioUsuarios">Usuarios</string>
-    <string name="relatorioDocumentos">Documentos</string>
-    <string name="descricao">Aplicação de gerenciamento de Usuários e Documentos. A aplicação contém ferramentas para cadastro, remoção, alteração e consulta de documentos e usuários em um banco de dados.</string>
     <string name="usuario">Usuario</string>
     <string name="nome">Nome</string>
     <string name="sobrenome">Sobrenome</string>
     <string name="cpf">CPF</string>
     <string name="cargo">Cargo</string>
+
+    <!-- TODO: Documentos-->
+    <string name="Documentos">Jfinder | Documentos</string>
+    <string name="documento">Documento</string>
+    <string name="numeroUnicoReferencia">Nº Referência</string>
+    <string name="tipoDeDocumento">Tipo de Documento</string>
+    <string name="interessado">Interessado</string>
+    <string name="tipoDeArmazenamento">Fisico ou Virtual</string>
+    <string name="dataArquivamento">Data Arquivamento</string>
+    <string name="descriçãoDocumento">Breve Descrição</string>
+    <string name="localCompletoDeArmazenamento">Local de Armazenamento</string>
+
+
+    <!-- TODO: Relatorios-->
+    <string name="Relatorios">Jfinder | Relatórios</string>
+    <string name="relatorioUsuarios">Usuarios</string>
+    <string name="relatorioDocumentos">Documentos</string>
+
+    <!-- TODO: CRUD-->
+    <string name="cadastrar">Cadastrar</string>
+    <string name="remover">Remover</string>
+    <string name="alterar">Alterar</string>
+    <string name="buscar">Buscar</string>
+
+
+    <!-- TODO: OUTROS-->
+    <string name="app_name">Jfinder-Mobile</string>
+    <string name="entrar">Entrar</string>
+    <string name="sair">Sair</string>
+    <string name="Jfinder">Jfinder</string>
+    <string name="todo">TODO</string>
+    <string name="descricao">Aplicação de gerenciamento de Usuários e Documentos. A aplicação contém ferramentas para cadastro, remoção, alteração e consulta de documentos e usuários em um banco de dados.</string>
 
 </resources>

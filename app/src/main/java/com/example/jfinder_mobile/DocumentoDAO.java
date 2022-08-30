@@ -2,7 +2,9 @@ package com.example.jfinder_mobile;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -14,6 +16,17 @@ public class DocumentoDAO {
     }
 
 
+
+    public boolean addDocumento(Documento d) {
+        try {
+            String sqlCmd = "INSERT INTO Documentosdb VALUES ('" + d.getNumeroUnicoReferencia() + "', '" + d.getTipoDeDocumento() + "', '" + d.getInteressado()  + "', '" + d.getTipoDeArmazenamento() + "', '" + d.getDataArquivamento() + "', '" + d.getDescriçãoDocumento() + "', '" + d.getLocalCompletoDeArmazenamento() + "')";
+            this.bancoDeDados.execSQL(sqlCmd);
+            return true;
+        } catch (SQLException e) {
+            Log.e("JfinderBD", e.getMessage());
+            return false;
+        }
+    }
 
 
     public ArrayList<Documento> todosDocumentos() {

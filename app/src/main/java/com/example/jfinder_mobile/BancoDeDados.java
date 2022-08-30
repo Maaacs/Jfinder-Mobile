@@ -14,9 +14,9 @@ public class BancoDeDados extends SQLiteOpenHelper {
     private static final String SQL_POPULATE_TABLES = "INSERT INTO Usuariosdb VALUES ('Jonas', 'Lima', '90238213256', 'Professor')";
     private static final String SQL_DELETE_TABLE_USER = "DROP TABLE IF EXISTS Usuariosdb";
 
-    private static final String SQL_CREATE_TABLE_DOC = "CREATE TABLE Documentosdb (numeroUnicoReferencia TEXT primary key, tipoDeDocumento TEXT, interessado TEXT , " +
-            "tipoDeArmazenamento TEXT, dataArquivamento TEXT, descriçãoDocumento TEXT, localCompletoDeArmazenamento TEXT)";
-    private static final String SQL_POPULATE_TABLE_DOC = "INSERT INTO Documentosdb VALUES ('444', 'Relatório Individual de Trabalho', 'Professor', 'Fisico' , '10/08/2022' , 'Documento referente à relatório individual de professor' , 'Armário 4, Gaveta 2, Pasta 1')";
+    private static final String SQL_CREATE_TABLE_DOC = "CREATE TABLE Documentosdb (numeroUnicoReferencia TEXT primary key, tipoDeDocumento TEXT, interessado TEXT , tipoDeArmazenamento TEXT, dataArquivamento TEXT, localCompletoDeArmazenamento TEXT, descriçãoDocumento TEXT)";
+
+    private static final String SQL_POPULATE_TABLE_DOC = "INSERT INTO Documentosdb VALUES ('444', 'Relatório Individual de Trabalho', 'Professor', 'Fisico' , '10/08/2022' , 'Armário 4, Gaveta 2, Pasta 1', 'Documento referente à relatório individual de professor' )";
     private static final String SQL_DELETE_TABLE_DOC = "DROP TABLE IF EXISTS Documentosdb";
 
     public BancoDeDados(Context context) {
