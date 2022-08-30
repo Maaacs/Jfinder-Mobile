@@ -86,8 +86,8 @@
         <item name="android:layout_marginTop">15dp</item>
     </style>
     <style name="Edit_Text_Compact_CPF">
-        <item name="android:layout_width">230dp</item>
-        <item name="android:layout_height">39dp</item>
+        <item name="android:layout_width">190dp</item>
+        <item name="android:layout_height">40dp</item>
         <item name="android:background">@drawable/edit_text</item>
         <item name="android:padding">10dp</item>
         <item name="android:maxLength">11</item> <!--limite de caracteres-->

@@ -94,7 +94,6 @@ o celular-->
             <Button
                 android:id="@+id/alterar"
                 style="@style/BotoesMenu"
-
                 android:drawableTop="@drawable/alterarusuario"
                 android:text="@string/alterar"
                 app:layout_constraintBottom_toBottomOf="parent"

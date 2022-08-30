@@ -14,7 +14,7 @@ public class BancoDeDados extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "Jfinder.db";
 
 
-    private static final String SQL_CREATE_TABLES = "CREATE TABLE Userdetails (nome TEXT primary key, sobrenome TEXT, cpf TEXT, cargo TEXT)";
+    private static final String SQL_CREATE_TABLES = "CREATE TABLE Userdetails (nome TEXT, sobrenome TEXT, cpf TEXT primary key, cargo TEXT)";
     private static final String SQL_POPULATE_TABLES = "INSERT INTO Userdetails VALUES ('Spider', 'Man', '90238213', 'Heroi')";
     private static final String SQL_DELETE_TABLES = "DROP TABLE IF EXISTS Userdetails";
 

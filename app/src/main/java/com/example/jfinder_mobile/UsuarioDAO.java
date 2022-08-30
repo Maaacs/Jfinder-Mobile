@@ -13,8 +13,7 @@ public class UsuarioDAO {
     private SQLiteDatabase bancoDeDados; //objeto que faz a conexão com o banco de dados
 
     public UsuarioDAO(Context context) {
-        this.bancoDeDados = (new BancoDeDados(context)).getWritableDatabase();
-        //abre conexão com o BD
+        this.bancoDeDados = (new BancoDeDados(context)).getWritableDatabase();//inicia conexão com o BD
     }
 
 
@@ -43,6 +42,26 @@ public class UsuarioDAO {
         }
     }
 
+    public void removerUsuario(String cpf) {
+        try {
+            String com = "DELETE FROM Userdetails WHERE cpf = '" + cpf + "'";
+            this.bancoDeDados.execSQL(com);
+        } catch (SQLException e) {
+            Log.e("JfinderBD", e.getMessage());
+        }
+    }
+
+    public boolean alterarUsuario(String nome, String sobrenome, String cargo, String cpf) {
+        try {
+            String cmd = "UPDATE Userdetails SET nome ='" + nome + "', sobrenome = '" + sobrenome + "', cargo = '" + cargo + "' WHERE cpf = '" + cpf + "'";
+            this.bancoDeDados.execSQL(cmd);
+            return true;
+        } catch (SQLException e) {
+            Log.e("JfinderBD", e.getMessage());
+            return false;
+        }
+    }
+
     public ArrayList<Usuario> todosUsuarios() {
 
         try {
@@ -59,16 +78,6 @@ public class UsuarioDAO {
             return listaUsuarios;
         } catch (Exception e) {
             return null;
-        }
-    }
-
-
-    public void removerUsuario(String cpf) {
-        try {
-            String com = "DELETE FROM Userdetails WHERE cpf = '" + cpf + "'";
-            this.bancoDeDados.execSQL(com);
-        } catch (SQLException e) {
-            Log.e("JfinderBD", e.getMessage());
         }
     }
 
