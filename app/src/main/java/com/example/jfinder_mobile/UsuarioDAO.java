@@ -18,9 +18,21 @@ public class UsuarioDAO {
 
 
 
+    public boolean addUsuario(Usuario p) {
+        try {
+            String sqlCmd = "INSERT INTO Usuariosdb VALUES ('" + p.getPrimeiroNome() + "', '" + p.getUltimoNome() + "', '" + p.getCPF() + "', '" + p.getCargo() + "')";
+            this.bancoDeDados.execSQL(sqlCmd);
+            return true;
+        } catch (SQLException e) {
+            Log.e("JfinderBD", e.getMessage());
+            return false;
+        }
+    }
+
+
     public Usuario buscarUsuario(String cpf) {
         Usuario usr = null;
-        String sqlQuery = "SELECT * FROM Userdetails WHERE cpf = '" + cpf + "'";
+        String sqlQuery = "SELECT * FROM Usuariosdb WHERE cpf = '" + cpf + "'";
         Cursor cursor = this.bancoDeDados.rawQuery(sqlQuery, null);
 
         if (cursor.moveToNext()) {
@@ -31,20 +43,9 @@ public class UsuarioDAO {
     }
 
 
-    public boolean addUsuario(Usuario p) {
-        try {
-            String sqlCmd = "INSERT INTO Userdetails VALUES ('" + p.getPrimeiroNome() + "', '" + p.getUltimoNome() + "', '" + p.getCPF() + "', '" + p.getCargo() + "')";
-            this.bancoDeDados.execSQL(sqlCmd);
-            return true;
-        } catch (SQLException e) {
-            Log.e("JfinderBD", e.getMessage());
-            return false;
-        }
-    }
-
     public void removerUsuario(String cpf) {
         try {
-            String com = "DELETE FROM Userdetails WHERE cpf = '" + cpf + "'";
+            String com = "DELETE FROM Usuariosdb WHERE cpf = '" + cpf + "'";
             this.bancoDeDados.execSQL(com);
         } catch (SQLException e) {
             Log.e("JfinderBD", e.getMessage());
@@ -53,7 +54,7 @@ public class UsuarioDAO {
 
     public boolean alterarUsuario(String nome, String sobrenome, String cargo, String cpf) {
         try {
-            String cmd = "UPDATE Userdetails SET nome ='" + nome + "', sobrenome = '" + sobrenome + "', cargo = '" + cargo + "' WHERE cpf = '" + cpf + "'";
+            String cmd = "UPDATE Usuariosdb SET nome ='" + nome + "', sobrenome = '" + sobrenome + "', cargo = '" + cargo + "' WHERE cpf = '" + cpf + "'";
             this.bancoDeDados.execSQL(cmd);
             return true;
         } catch (SQLException e) {
@@ -67,7 +68,7 @@ public class UsuarioDAO {
         try {
             ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
             Usuario p;
-            String sqlQuery = "SELECT * FROM Userdetails";
+            String sqlQuery = "SELECT * FROM Usuariosdb";
             Cursor cursor = this.bancoDeDados.rawQuery(sqlQuery, null);
 
             while (cursor.moveToNext()) {

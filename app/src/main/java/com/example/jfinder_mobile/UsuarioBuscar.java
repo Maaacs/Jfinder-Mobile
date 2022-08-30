@@ -14,6 +14,7 @@ public class UsuarioBuscar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_usuario_buscar);
+        getSupportActionBar().hide(); // esconde a barra de título do app (toolbar)
     }
 
     public void btnbuscar(View view) {
