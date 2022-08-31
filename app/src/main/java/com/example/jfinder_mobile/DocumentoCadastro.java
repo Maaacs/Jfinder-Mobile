@@ -3,12 +3,14 @@ package com.example.jfinder_mobile;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class DocumentoCadastro extends AppCompatActivity {
+    private AlertDialog alerta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,15 @@ public class DocumentoCadastro extends AppCompatActivity {
 
             builder.setMessage("Nº Referência: " + numeroUnicoReferenciaTXT.getText().toString() + "\nTipo de Documento: " + tipoDeDocumentoTXT.getText().toString() + "\n Interessado: " +
                     interessadoTXT.getText().toString() + "\n Tipo de Armazenamento: " + tipoDeArmazenamentoTXT.getText().toString() + "\n Data de Arquivamento: " + dataArquivamentoTXT.getText().toString() + "\n Local de Armazenamento: " + localCompletoDeArmazenamentoTXT.getText().toString() + "\n Descrição: " + descriçãoDocumentoTXT.getText().toString());
+            builder.setPositiveButton("Positivo", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface arg0, int arg1) {
+                    Toast.makeText(DocumentoCadastro.this, "positivo=" + arg1, Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            alerta = builder.create();
+            //Exibe
+            alerta.show();
 
         }else{
             Toast.makeText(DocumentoCadastro.this, "Erro ao cadastrar", Toast.LENGTH_SHORT).show();
