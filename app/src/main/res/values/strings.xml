@@ -7,6 +7,7 @@
     <string name="sobrenome">Sobrenome</string>
     <string name="cpf">CPF</string>
     <string name="cargo">Cargo</string>
+    <string name="cpf2">Insira o CPF</string>
 
     <!-- TODO: Documentos-->
     <string name="Documentos">Jfinder | Documentos</string>

@@ -31,7 +31,7 @@ public class UsuarioBuscar extends AppCompatActivity {
         if (usr == null) {
             nome_txt.setText("Não encontrado");
             sobrenome_txt.setText("Não encontrado");
-            cpf_txt.setText(0);
+            cpf_txt.setText("Não encontrado");
             cargo_txt.setText("Não encontrado");
             Toast.makeText(this, "ErrOR", Toast.LENGTH_SHORT).show();
 
