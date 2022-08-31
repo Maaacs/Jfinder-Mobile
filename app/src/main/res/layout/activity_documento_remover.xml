@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app2="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fillViewport="true"
+    tools:context=".DocumentoRemover">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="84dp"
+        android:layout_height="74dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/folder"
+        app2:layout_constraintBottom_toBottomOf="parent"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintHorizontal_bias="0.0"
+        app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toTopOf="parent"
+        app2:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="148dp"
+        android:layout_height="27dp"
+        android:text="@string/Documentos"
+        android:textColor="@color/white"
+        app2:layout_constraintBottom_toBottomOf="parent"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintHorizontal_bias="0.0"
+        app2:layout_constraintStart_toEndOf="@+id/logo"
+        app2:layout_constraintTop_toTopOf="parent"
+        app2:layout_constraintVertical_bias="0.036" />
+
+
+    <ListView
+        android:id="@+id/lista"
+        android:layout_width="402dp"
+        android:layout_height="320dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="9dp"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botao_remover"
+        style="@style/botoes"
+        android:layout_marginEnd="32dp"
+        android:onClick="btnremover"
+        android:text="@string/remover"
+        app2:layout_constraintBottom_toBottomOf="parent"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintTop_toBottomOf="@+id/lista"
+        tools:ignore="OnClick" />
+
+    <EditText
+        android:id="@+id/NumReferencia_editText"
+        style="@style/Edit_Text_Compact_CPF"
+        android:hint="@string/numeroUnicoReferencia"
+        android:inputType="number"
+        android:maxLength="11"
+        app2:layout_constraintBottom_toBottomOf="parent"
+        app2:layout_constraintEnd_toStartOf="@+id/botao_remover"
+        app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toBottomOf="@+id/lista"
+        android:autofillHints="" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

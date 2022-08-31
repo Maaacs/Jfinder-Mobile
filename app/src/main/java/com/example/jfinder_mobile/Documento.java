@@ -100,10 +100,16 @@ public class Documento {
 
 
     public String toString() {
+        return "Nº Referência: " + numeroUnicoReferencia + "\nTipo de Documento: " + "\n" +tipoDeDocumento +"\nInteressado: " + interessado +
+                "\nTipo de Armazenamento: " + tipoDeArmazenamento +"\nData de Arquivamento: " + dataArquivamento +"\nLocal de Armazenamento: " +"\n" +localCompletoDeArmazenamento +
+                "\nDescrição: " + "\n"+ descriçãoDocumento;
+    }
+
+/*    public String toString() {
         return "Nº Referência: " + numeroUnicoReferencia + "\n" + "\nTipo de Documento: " +tipoDeDocumento + "\n" +"\nInteressado: " + interessado + "\n" +
                 "\nTipo de Armazenamento: " + tipoDeArmazenamento + "\n" +"\nData de Arquivamento: " + dataArquivamento + "\n" +"\nLocal de Armazenamento: " + localCompletoDeArmazenamento + "\n" +
                 "\nDescrição: " + descriçãoDocumento;
-    }
+    }*/
 
 
 }

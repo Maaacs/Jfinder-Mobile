@@ -29,6 +29,27 @@ public class DocumentoDAO {
     }
 
 
+    public Documento buscarDocumento(String numeroUnicoReferencia) {
+        Documento doc = null;
+        String sqlQuery = "SELECT * FROM Documentosdb WHERE numeroUnicoReferencia = '" + numeroUnicoReferencia + "'";
+        Cursor cursor = this.bancoDeDados.rawQuery(sqlQuery, null);
+
+        if (cursor.moveToNext()) {
+            doc = new Documento(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3) , cursor.getString(4), cursor.getString(5), (cursor.getString(6)));
+        }
+        cursor.close();
+        return doc;
+    }
+
+    public void removerDocumento(String numeroUnicoReferencia) {
+        try {
+            String com = "DELETE FROM Documentosdb WHERE numeroUnicoReferencia = '" + numeroUnicoReferencia + "'";
+            this.bancoDeDados.execSQL(com);
+        } catch (SQLException e) {
+            Log.e("JfinderBD", e.getMessage());
+        }
+    }
+
     public ArrayList<Documento> todosDocumentos() {
         try {
             ArrayList<Documento> listaDocumentos = new ArrayList<Documento>();

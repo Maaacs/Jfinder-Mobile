@@ -48,11 +48,21 @@ public class FragmentDocumentos extends Fragment {
         View view = inflater.inflate(R.layout.fragment_documentos, container, false);
 
         Button cadastrarBotao = (Button)view.findViewById(R.id.cadastrar);
+        Button removerBotao = (Button)view.findViewById(R.id.remover);
         ImageView sair = (ImageView)view.findViewById(R.id.sair);
+
         cadastrarBotao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent in = new Intent(getActivity(), DocumentoCadastro.class);
+                startActivity(in);
+            }
+        });
+
+        removerBotao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(getActivity(), DocumentoRemover.class);
                 startActivity(in);
             }
         });
