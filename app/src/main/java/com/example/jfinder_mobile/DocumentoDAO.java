@@ -50,6 +50,17 @@ public class DocumentoDAO {
         }
     }
 
+    public boolean alterarDocumento(String tipoDeDocumento, String interessado, String tipoDeArmazenamento, String dataArquivamento, String localCompletoDeArmazenamento, String descriçãoDocumento, String numeroUnicoReferencia) {
+        try {
+            String cmd = "UPDATE Documentosdb SET tipoDeDocumento ='" + tipoDeDocumento + "', interessado = '" + interessado + "', tipoDeArmazenamento = '" + tipoDeArmazenamento + "', dataArquivamento = '" + dataArquivamento + "', localCompletoDeArmazenamento = '" + localCompletoDeArmazenamento + "', descriçãoDocumento = '" + descriçãoDocumento + "' WHERE numeroUnicoReferencia = '" + numeroUnicoReferencia + "'";
+            this.bancoDeDados.execSQL(cmd);
+            return true;
+        } catch (SQLException e) {
+            Log.e("JfinderBD", e.getMessage());
+            return false;
+        }
+    }
+
     public ArrayList<Documento> todosDocumentos() {
         try {
             ArrayList<Documento> listaDocumentos = new ArrayList<Documento>();

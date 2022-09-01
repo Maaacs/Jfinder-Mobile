@@ -5,19 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DocumentoCadastro"
+    tools:context=".DocumentoAlterar"
     android:id="@+id/cadastro_Documento"
     android:background="@drawable/background">
-
-
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".DocumentoAlterar"
-    android:background="@drawable/background">
-
 
 
     <ImageView
@@ -25,7 +15,7 @@
         android:layout_width="84dp"
         android:layout_height="74dp"
         android:contentDescription="@string/todo"
-        android:src="@drawable/folder"
+        android:src="@drawable/docaltera"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -37,7 +27,7 @@
         android:id="@+id/textView"
         android:layout_width="157dp"
         android:layout_height="21dp"
-        android:text="@string/Documentos"
+        android:text="@string/DocumentoAlterar"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,56 +36,32 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.036" />
 
-    <ImageView
-        android:id="@+id/logoUsuario"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="72dp"
-        android:src="@drawable/docadd"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cadastrar"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoUsuario"
-        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/numeroReferencia"
-        style="@style/Edit_Text"
-        android:layout_marginTop="156dp"
-        android:autofillHints=""
-        android:hint="@string/numeroUnicoReferencia"
+        android:id="@+id/num_referencia2"
+        style="@style/Edit_Text_Compact_CPF"
+        android:layout_marginStart="40dp"
+        android:hint="@string/numeroUnicoReferencia2"
         android:inputType="number"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:maxLength="11"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.189" />
 
     <EditText
-        android:id="@+id/tipoDeDocumento"
+        android:id="@+id/tipoDeDocumento2"
         style="@style/Edit_Text"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="236dp"
         android:hint="@string/tipoDeDocumento"
         android:inputType="text"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numeroReferencia" />
-
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/interessado"
+        android:id="@+id/interessado2"
         style="@style/Edit_Text"
         android:layout_marginTop="12dp"
         android:hint="@string/interessado"
@@ -103,59 +69,79 @@
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tipoDeDocumento" />
+        app:layout_constraintTop_toBottomOf="@+id/tipoDeDocumento2" />
+
 
     <EditText
-        android:id="@+id/tipoDeArmazenamento"
+        android:id="@+id/tipoDeArmazenamento2"
         style="@style/Edit_Text"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:hint="@string/tipoDeArmazenamento"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/interessado" />
-
+        app:layout_constraintTop_toBottomOf="@+id/interessado2" />
 
     <EditText
-        android:id="@+id/dataArquivamento"
+        android:id="@+id/dataArquivamento2"
         style="@style/Edit_Text"
+        android:layout_marginTop="12dp"
         android:hint="@string/dataArquivamento"
-        android:minHeight="48dp"
         android:inputType="date"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tipoDeArmazenamento" />
+        app:layout_constraintTop_toBottomOf="@+id/tipoDeArmazenamento2" />
 
     <EditText
-        android:id="@+id/localDeArmazenamento"
+        android:id="@+id/localDeArmazenamento2"
         style="@style/Edit_Text"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:hint="@string/localCompletoDeArmazenamento"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dataArquivamento" />
+        app:layout_constraintTop_toBottomOf="@+id/dataArquivamento2" />
 
     <EditText
-        android:id="@+id/descricaoDocumento"
+        android:id="@+id/descricaoDocumento2"
         style="@style/Edit_Text_descricao"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:hint="@string/descriçãoDocumento"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/localDeArmazenamento" />
+        app:layout_constraintTop_toBottomOf="@+id/localDeArmazenamento2" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnInsert"
+        android:id="@+id/btnBuscar"
         style="@style/botoes"
-        android:layout_marginBottom="36dp"
-        android:onClick="bntInserir"
-        android:text="@string/cadastrar"
+        android:layout_marginEnd="40dp"
+        android:onClick="bntBuscar"
+        android:text="@string/buscar"
         app:layout_constraintBaseline_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toEndOf="@+id/num_referencia2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.186"
         tools:ignore="OnClick" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAlterar"
+        style="@style/botoes"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="60dp"
+        android:onClick="btnalterar"
+        android:text="@string/alterar"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descricaoDocumento2"
+        tools:ignore="OnClick" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
