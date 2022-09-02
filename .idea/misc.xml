@@ -9,10 +9,12 @@
         <entry key="app/src/main/res/drawable/container_components.xml" value="0.219" />
         <entry key="app/src/main/res/drawable/edit_text.xml" value="0.219" />
         <entry key="app/src/main/res/drawable/entrar_button.xml" value="0.189" />
+        <entry key="app/src/main/res/drawable/ic_baseline_arrow_drop_down_24.xml" value="0.242" />
         <entry key="app/src/main/res/drawable/ic_baseline_chevron_right_24.xml" value="0.356" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2285" />
         <entry key="app/src/main/res/drawable/sair_button.xml" value="0.331" />
         <entry key="app/src/main/res/drawable/senha_account.xml" value="0.2285" />
+        <entry key="app/src/main/res/drawable/spinner_custom.xml" value="0.242" />
         <entry key="app/src/main/res/drawable/user_account.xml" value="0.341" />
         <entry key="app/src/main/res/layout/activity_cadastro_teste.xml" value="0.2957427536231884" />
         <entry key="app/src/main/res/layout/activity_cadastro_usuario.xml" value="0.3129528985507246" />
@@ -20,19 +22,23 @@
         <entry key="app/src/main/res/layout/activity_documento_buscar.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_documento_cadastro.xml" value="0.3546875" />
         <entry key="app/src/main/res/layout/activity_documento_listar.xml" value="0.3546875" />
+        <entry key="app/src/main/res/layout/activity_documento_relatorio.xml" value="0.2907608695652174" />
         <entry key="app/src/main/res/layout/activity_documento_remover.xml" value="0.3546875" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3390625" />
         <entry key="app/src/main/res/layout/activity_navigation_menu.xml" value="0.24864130434782608" />
         <entry key="app/src/main/res/layout/activity_remover_usuario.xml" value="0.27219202898550726" />
+        <entry key="app/src/main/res/layout/activity_sasa.xml" value="0.3546875" />
         <entry key="app/src/main/res/layout/activity_sobre.xml" value="0.27219202898550726" />
         <entry key="app/src/main/res/layout/activity_user_list.xml" value="0.2957427536231884" />
         <entry key="app/src/main/res/layout/activity_usuario_alterar.xml" value="0.3546875" />
         <entry key="app/src/main/res/layout/activity_usuario_buscar.xml" value="0.3546875" />
         <entry key="app/src/main/res/layout/activity_usuario_cadastro.xml" value="0.3546875" />
         <entry key="app/src/main/res/layout/activity_usuario_listar.xml" value="0.33697916666666666" />
+        <entry key="app/src/main/res/layout/activity_usuario_relatorio.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_usuario_remover.xml" value="0.3546875" />
         <entry key="app/src/main/res/layout/activity_usuarios_menu.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_usuarios_relatorio.xml" value="0.67" />
         <entry key="app/src/main/res/layout/fragment_documentos.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_relatorios.xml" value="0.3129528985507246" />
         <entry key="app/src/main/res/layout/fragment_sair.xml" value="0.10648148148148148" />

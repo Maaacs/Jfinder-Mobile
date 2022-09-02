@@ -69,7 +69,7 @@ public class FragmentRelatorio extends Fragment {
         usuariosReletorio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in = new Intent(getActivity(), UsuarioListar.class);
+                Intent in = new Intent(getActivity(), UsuarioRelatorio.class);
                 startActivity(in);
             }
         });
@@ -77,7 +77,7 @@ public class FragmentRelatorio extends Fragment {
         documentosRelatorio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in = new Intent(getActivity(), DocumentoListar.class);
+                Intent in = new Intent(getActivity(), DocumentoRelatorio.class);
                 startActivity(in);
             }
         });
