@@ -4,14 +4,13 @@ public class Documento {
 
 
     //atributos
-    private String numeroUnicoReferencia; //
+    private String numeroUnicoReferencia;
     private String tipoDeDocumento; //
     private String interessado; //
     private String tipoDeArmazenamento;
     private String dataArquivamento;
     private String localCompletoDeArmazenamento;
-    private String descriçãoDocumento; //
- //
+    private String descriçãoDocumento;
 
     public Documento (){
 

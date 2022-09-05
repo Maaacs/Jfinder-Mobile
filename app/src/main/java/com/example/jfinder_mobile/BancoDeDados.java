@@ -10,7 +10,6 @@ public class BancoDeDados extends SQLiteOpenHelper {
 
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "Jfinder.db";
-    protected static Connection conexao = null;
 
 
     private static final String SQL_CREATE_TABLE_USER = "CREATE TABLE Usuariosdb (nome TEXT, sobrenome TEXT, cpf TEXT primary key, cargo TEXT)";
@@ -36,12 +35,6 @@ public class BancoDeDados extends SQLiteOpenHelper {
         db.execSQL(SQL_DELETE_TABLE_USER);
         db.execSQL(SQL_DELETE_TABLE_DOC);
         onCreate(db);
-    }
-
-
-    public static Connection getConexao() {
-        System.out.println("Método banco conexao");
-        return BancoDeDados.conexao;
     }
 
 }

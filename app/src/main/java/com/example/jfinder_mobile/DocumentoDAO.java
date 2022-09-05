@@ -107,7 +107,6 @@ public class DocumentoDAO {
     public ArrayList<Documento> buscarPorTipo(String tip){
 
         try {
-            System.out.println("opaa");
             ArrayList<Documento> listaDocumentos = new ArrayList<Documento>();
             Documento d;
             String sqlQuery = "SELECT * FROM Documentosdb WHERE tipoDeDocumento LIKE '%"+ tip +"%' ";
@@ -153,7 +152,7 @@ public class DocumentoDAO {
     }
 
     public ArrayList<Documento> buscarPorPalavraChave(String Pchave){
-        
+
         try {
             ArrayList<Documento> listaDocumentos = new ArrayList<Documento>();
             Documento d;
