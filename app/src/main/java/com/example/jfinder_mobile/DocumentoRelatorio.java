@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -45,14 +46,13 @@ public class DocumentoRelatorio extends AppCompatActivity {
         DocumentoDAO doc = new DocumentoDAO(this);
         EditText itemBusca = (EditText) findViewById(R.id.itemBusca);
         String itemAserBuscado = itemBusca.getText().toString();
+        System.out.println(itemAserBuscado);
+        int encontrei = 0;
 
         if (selecionador.equals("Tipo")){
-            System.out.println("Achei o primeiro!");
-
-            if(doc.buscarPorTipo(itemAserBuscado) == null){
-                System.out.println("Não encontrado");
+            if(itemAserBuscado.matches("")){
+                Toast.makeText(this, "Insira a busca!", Toast.LENGTH_SHORT).show();
             }else{
-                System.out.println("Encontrei!");
 
                 DocumentoDAO docDAO = new DocumentoDAO(this);
                 final ListView listaDeDocumentos = (ListView) findViewById(R.id.lista);
@@ -61,15 +61,20 @@ public class DocumentoRelatorio extends AppCompatActivity {
                 ArrayAdapter<Documento> arrayAdapter = new ArrayAdapter<Documento>(this, android.R.layout.simple_list_item_1, listaDocumentos);
                 listaDeDocumentos.setAdapter(arrayAdapter);
 
+                if (docDAO.buscarPorTipo(itemAserBuscado).size() > 1){
+                    Toast.makeText(this, "Resultados encontrados!", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(this, "Resultados não encontrados!", Toast.LENGTH_SHORT).show();
+                }
+
             }
 
         }
         else if(selecionador.equals("Interessado")){
-            System.out.println("Achei o terceiro!");
-            if(doc.buscarPorInteressado(itemAserBuscado) == null){
-                System.out.println("Não encontrado");
+
+            if(itemAserBuscado.matches("")){
+                Toast.makeText(this, "Insira a busca!", Toast.LENGTH_SHORT).show();
             }else{
-                System.out.println("Encontrei!");
 
                 DocumentoDAO docDAO = new DocumentoDAO(this);
                 final ListView listaDeDocumentos = (ListView) findViewById(R.id.lista);
@@ -78,16 +83,19 @@ public class DocumentoRelatorio extends AppCompatActivity {
                 ArrayAdapter<Documento> arrayAdapter = new ArrayAdapter<Documento>(this, android.R.layout.simple_list_item_1, listaDocumentos);
                 listaDeDocumentos.setAdapter(arrayAdapter);
 
+                if (docDAO.buscarPorInteressado(itemAserBuscado).size() > 1){
+                    Toast.makeText(this, "Resultados encontrados!", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(this, "Resultados não encontrados!", Toast.LENGTH_SHORT).show();
+                }
+
             }
         }
         else if(selecionador.equals("Palavra-chave")){
-            System.out.println("Achei o quarto!");
 
-            if(doc.buscarPorPalavraChave(itemAserBuscado) == null){
-                System.out.println("Não encontrado");
+            if(itemAserBuscado.matches("")){;
+                Toast.makeText(this, "Insira a busca!", Toast.LENGTH_SHORT).show();
             }else{
-                System.out.println("Encontrei!");
-
                 DocumentoDAO docDAO = new DocumentoDAO(this);
                 final ListView listaDeDocumentos = (ListView) findViewById(R.id.lista);
                 final ArrayList<Documento> listaDocumentos = docDAO.buscarPorPalavraChave(itemAserBuscado);
@@ -95,13 +103,19 @@ public class DocumentoRelatorio extends AppCompatActivity {
                 ArrayAdapter<Documento> arrayAdapter = new ArrayAdapter<Documento>(this, android.R.layout.simple_list_item_1, listaDocumentos);
                 listaDeDocumentos.setAdapter(arrayAdapter);
 
+                if (docDAO.buscarPorPalavraChave(itemAserBuscado).size() > 1){
+                    Toast.makeText(this, "Resultados encontrados!", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(this, "Resultados não encontrados!", Toast.LENGTH_SHORT).show();
+                }
+
+
             }
         }else if(selecionador.equals("Ano")){
 
-            if(doc.buscarPorAno(itemAserBuscado) == null){
-                System.out.println("Não encontrado");
+            if(itemAserBuscado.matches("")){
+                Toast.makeText(this, "Insira a busca!", Toast.LENGTH_SHORT).show();
             }else{
-                System.out.println("Encontrei!");
 
                 DocumentoDAO docDAO = new DocumentoDAO(this);
                 final ListView listaDeDocumentos = (ListView) findViewById(R.id.lista);
@@ -109,6 +123,12 @@ public class DocumentoRelatorio extends AppCompatActivity {
 
                 ArrayAdapter<Documento> arrayAdapter = new ArrayAdapter<Documento>(this, android.R.layout.simple_list_item_1, listaDocumentos);
                 listaDeDocumentos.setAdapter(arrayAdapter);
+
+                if (docDAO.buscarPorAno(itemAserBuscado).size() > 1){
+                    Toast.makeText(this, "Resultados encontrados!", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(this, "Resultados não encontrados!", Toast.LENGTH_SHORT).show();
+                }
 
             }
         }

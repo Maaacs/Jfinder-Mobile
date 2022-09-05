@@ -83,9 +83,31 @@ public class DocumentoDAO {
         }
     }
 
+    public ArrayList<Documento> buscarPorAno(String ano){
+
+        try {
+            ArrayList<Documento> listaDocumentos = new ArrayList<Documento>();
+            Documento d;
+            String sqlQuery = "SELECT * FROM Documentosdb WHERE dataArquivamento LIKE '%"+ ano +"' ";
+
+            Cursor cursor = this.bancoDeDados.rawQuery(sqlQuery, null);
+
+            while (cursor.moveToNext()) {
+                d = new Documento(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5), cursor.getString(6));
+                listaDocumentos.add(d);
+            }
+            cursor.close();
+            return listaDocumentos;
+
+        }catch (Exception e){
+            return null;
+        }
+    }
+
     public ArrayList<Documento> buscarPorTipo(String tip){
 
         try {
+            System.out.println("opaa");
             ArrayList<Documento> listaDocumentos = new ArrayList<Documento>();
             Documento d;
             String sqlQuery = "SELECT * FROM Documentosdb WHERE tipoDeDocumento LIKE '%"+ tip +"%' ";
@@ -101,6 +123,7 @@ public class DocumentoDAO {
 
 
         }catch (Exception e){
+            System.out.println("aff");
             return null;
         }
     }
@@ -130,6 +153,7 @@ public class DocumentoDAO {
     }
 
     public ArrayList<Documento> buscarPorPalavraChave(String Pchave){
+        int cont = 0;
 
         try {
             ArrayList<Documento> listaDocumentos = new ArrayList<Documento>();
@@ -141,41 +165,17 @@ public class DocumentoDAO {
             while (cursor.moveToNext()) {
                 d = new Documento(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5), cursor.getString(6));
                 listaDocumentos.add(d);
+                cont++;
             }
             cursor.close();
             return listaDocumentos;
 
 
-        }catch (Exception e){
+        }catch (Exception exception){
             return null;
         }
 
     }
-
-    public ArrayList<Documento> buscarPorAno(String ano){
-
-        try {
-            ArrayList<Documento> listaDocumentos = new ArrayList<Documento>();
-            Documento d;
-            String sqlQuery = "SELECT * FROM Documentosdb WHERE dataArquivamento LIKE '%"+ ano +"' ";
-
-            Cursor cursor = this.bancoDeDados.rawQuery(sqlQuery, null);
-
-            while (cursor.moveToNext()) {
-                d = new Documento(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5), cursor.getString(6));
-                listaDocumentos.add(d);
-            }
-            cursor.close();
-            return listaDocumentos;
-
-
-        }catch (Exception e){
-            return null;
-        }
-
-    }
-
-
 
 
 
