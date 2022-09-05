@@ -1,9 +1,6 @@
 package com.example.jfinder_mobile;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -16,9 +13,6 @@ import java.util.ArrayList;
 
 public class DocumentoRelatorio extends AppCompatActivity {
     Spinner relatorioDocumentos;
-    Spinner tipoBuscar;
-    private SQLiteDatabase bancoDeDados;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +41,7 @@ public class DocumentoRelatorio extends AppCompatActivity {
         EditText itemBusca = (EditText) findViewById(R.id.itemBusca);
         String itemAserBuscado = itemBusca.getText().toString();
         System.out.println(itemAserBuscado);
-        int encontrei = 0;
+
 
         if (selecionador.equals("Tipo")){
             if(itemAserBuscado.matches("")){
