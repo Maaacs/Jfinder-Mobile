@@ -6,6 +6,9 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 
 public class DocumentoDAO {
@@ -76,8 +79,105 @@ public class DocumentoDAO {
             return listaDocumentos;
         } catch (Exception e) {
             return null;
+
         }
     }
+
+    public ArrayList<Documento> buscarPorTipo(String tip){
+
+        try {
+            ArrayList<Documento> listaDocumentos = new ArrayList<Documento>();
+            Documento d;
+            String sqlQuery = "SELECT * FROM Documentosdb WHERE tipoDeDocumento LIKE '%"+ tip +"%' ";
+
+            Cursor cursor = this.bancoDeDados.rawQuery(sqlQuery, null);
+
+            while (cursor.moveToNext()) {
+                d = new Documento(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5), cursor.getString(6));
+                listaDocumentos.add(d);
+            }
+            cursor.close();
+            return listaDocumentos;
+
+
+        }catch (Exception e){
+            return null;
+        }
+    }
+
+
+    public ArrayList<Documento> buscarPorInteressado(String inte){
+
+        try {
+            ArrayList<Documento> listaDocumentos = new ArrayList<Documento>();
+            Documento d;
+            String sqlQuery = "SELECT * FROM Documentosdb WHERE interessado LIKE '%"+ inte +"%' ";
+
+            Cursor cursor = this.bancoDeDados.rawQuery(sqlQuery, null);
+
+            while (cursor.moveToNext()) {
+                d = new Documento(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5), cursor.getString(6));
+                listaDocumentos.add(d);
+            }
+            cursor.close();
+            return listaDocumentos;
+
+
+        }catch (Exception e){
+            return null;
+        }
+
+    }
+
+    public ArrayList<Documento> buscarPorPalavraChave(String Pchave){
+
+        try {
+            ArrayList<Documento> listaDocumentos = new ArrayList<Documento>();
+            Documento d;
+            String sqlQuery = "SELECT * FROM Documentosdb WHERE descriçãoDocumento LIKE '%"+ Pchave +"%' ";
+
+            Cursor cursor = this.bancoDeDados.rawQuery(sqlQuery, null);
+
+            while (cursor.moveToNext()) {
+                d = new Documento(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5), cursor.getString(6));
+                listaDocumentos.add(d);
+            }
+            cursor.close();
+            return listaDocumentos;
+
+
+        }catch (Exception e){
+            return null;
+        }
+
+    }
+
+    public ArrayList<Documento> buscarPorAno(String ano){
+
+        try {
+            ArrayList<Documento> listaDocumentos = new ArrayList<Documento>();
+            Documento d;
+            String sqlQuery = "SELECT * FROM Documentosdb WHERE dataArquivamento LIKE '%"+ ano +"' ";
+
+            Cursor cursor = this.bancoDeDados.rawQuery(sqlQuery, null);
+
+            while (cursor.moveToNext()) {
+                d = new Documento(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5), cursor.getString(6));
+                listaDocumentos.add(d);
+            }
+            cursor.close();
+            return listaDocumentos;
+
+
+        }catch (Exception e){
+            return null;
+        }
+
+    }
+
+
+
+
 
 
 }

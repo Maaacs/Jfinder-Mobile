@@ -9,6 +9,14 @@
     <string name="cargo">Cargo</string>
     <string name="cpf2">Insira o CPF</string>
 
+    <string-array name="relatorio_usuarios_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+    </string-array>
+
+
     <!-- TODO: Documentos-->
     <string name="Documentos">Jfinder | Documentos</string>
     <string name="documento">Documento</string>
@@ -20,9 +28,14 @@
     <string name="dataArquivamento">Data Arquivamento</string>
     <string name="descriçãoDocumento">Breve Descrição</string>
     <string name="localCompletoDeArmazenamento">Local de Armazenamento</string>
-
     <string name="DocumentoAlterar">Alterar | Documentos</string>
 
+    <string-array name="relatorio_documentos_array">
+        <item>Ano</item>
+        <item>Tipo</item>
+        <item>Interessado</item>
+        <item>Palavra-chave</item>
+    </string-array>
 
     <!-- TODO: Relatorios-->
     <string name="Relatorios">Jfinder | Relatórios</string>
@@ -44,21 +57,6 @@
     <string name="todo">TODO</string>
     <string name="insira">Insira a busca</string>
     <string name="descricao">Aplicação de gerenciamento de Usuários e Documentos. A aplicação contém ferramentas para cadastro, remoção, alteração e consulta de documentos e usuários em um banco de dados.</string>
-
-
-    <string-array name="relatorio_usuarios_array">
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
-        <item>Mars</item>
-    </string-array>
-
-    <string-array name="relatorio_documentos_array">
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
-        <item>Mars</item>
-    </string-array>
 
 
 </resources>

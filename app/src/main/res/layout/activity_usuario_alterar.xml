@@ -104,10 +104,9 @@
         android:inputType="number"
         android:maxLength="11"
         app2:layout_constraintBottom_toBottomOf="parent"
-        app2:layout_constraintEnd_toStartOf="@+id/botao_buscar"
-        app2:layout_constraintHorizontal_bias="0.505"
-        app2:layout_constraintStart_toStartOf="parent"
-        />
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintHorizontal_bias="0.072"
+        app2:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botao_buscar"

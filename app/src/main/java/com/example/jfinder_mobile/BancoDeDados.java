@@ -4,10 +4,13 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.sql.Connection;
+
 public class BancoDeDados extends SQLiteOpenHelper {
 
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "Jfinder.db";
+    protected static Connection conexao = null;
 
 
     private static final String SQL_CREATE_TABLE_USER = "CREATE TABLE Usuariosdb (nome TEXT, sobrenome TEXT, cpf TEXT primary key, cargo TEXT)";
@@ -15,7 +18,6 @@ public class BancoDeDados extends SQLiteOpenHelper {
     private static final String SQL_DELETE_TABLE_USER = "DROP TABLE IF EXISTS Usuariosdb";
 
     private static final String SQL_CREATE_TABLE_DOC = "CREATE TABLE Documentosdb (numeroUnicoReferencia TEXT primary key, tipoDeDocumento TEXT, interessado TEXT , tipoDeArmazenamento TEXT, dataArquivamento TEXT, localCompletoDeArmazenamento TEXT, descriçãoDocumento TEXT)";
-
     private static final String SQL_POPULATE_TABLE_DOC = "INSERT INTO Documentosdb VALUES ('444', 'Relatório Individual de Trabalho', 'Professor', 'Fisico' , '10/08/2022' , 'Armário 4, Gaveta 2, Pasta 1', 'Documento referente à relatório individual de professor' )";
     private static final String SQL_DELETE_TABLE_DOC = "DROP TABLE IF EXISTS Documentosdb";
 
@@ -34,6 +36,12 @@ public class BancoDeDados extends SQLiteOpenHelper {
         db.execSQL(SQL_DELETE_TABLE_USER);
         db.execSQL(SQL_DELETE_TABLE_DOC);
         onCreate(db);
+    }
+
+
+    public static Connection getConexao() {
+        System.out.println("Método banco conexao");
+        return BancoDeDados.conexao;
     }
 
 }
