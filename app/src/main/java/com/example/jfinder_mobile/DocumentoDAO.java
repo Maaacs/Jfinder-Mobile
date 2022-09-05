@@ -153,8 +153,7 @@ public class DocumentoDAO {
     }
 
     public ArrayList<Documento> buscarPorPalavraChave(String Pchave){
-        int cont = 0;
-
+        
         try {
             ArrayList<Documento> listaDocumentos = new ArrayList<Documento>();
             Documento d;
@@ -165,7 +164,6 @@ public class DocumentoDAO {
             while (cursor.moveToNext()) {
                 d = new Documento(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5), cursor.getString(6));
                 listaDocumentos.add(d);
-                cont++;
             }
             cursor.close();
             return listaDocumentos;
