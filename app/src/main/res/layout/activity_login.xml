@@ -113,8 +113,8 @@ o celular-->
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:indeterminateTint="@color/azul"
-            android:visibility="invisible"
+            android:visibility="gone"
+            android:indeterminateTint="@color/roxo"
             app2:layout_constraintEnd_toEndOf="parent"
             app2:layout_constraintStart_toStartOf="parent"
             app2:layout_constraintTop_toBottomOf="@+id/containerComponents" />
