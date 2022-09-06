@@ -67,7 +67,7 @@ public class UsuarioAlterar extends AppCompatActivity {
 
         UsuarioDAO p = new UsuarioDAO(this);
 
-        if (p.buscarUsuario(cpf) != null){
+        if (p.buscarUsuario(cpf) != null){ //se retoronou um usuário da busca, executa
             if (nomeBusca.matches("") || sobrenomeBusca.matches("") || cargoBusca.matches("")) {
                 Toast.makeText(this, "Insira todos os dados!", Toast.LENGTH_SHORT).show();
             }else{

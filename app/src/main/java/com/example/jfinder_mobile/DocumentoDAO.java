@@ -6,9 +6,6 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.util.ArrayList;
 
 public class DocumentoDAO {
@@ -172,6 +169,20 @@ public class DocumentoDAO {
             return null;
         }
 
+    }
+
+    public ArrayList<Documento> buscarDocumentoLista(String numeroUnicoReferencia) {
+        Documento doc = null;
+        ArrayList<Documento> documentoLista = new ArrayList<Documento>();
+        String sqlQuery = "SELECT * FROM Documentosdb WHERE numeroUnicoReferencia = '" + numeroUnicoReferencia + "'";
+        Cursor cursor = this.bancoDeDados.rawQuery(sqlQuery, null);
+
+        if (cursor.moveToNext()) {
+            doc = new Documento(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3) , cursor.getString(4), cursor.getString(5), (cursor.getString(6)));
+            documentoLista.add(doc);
+        }
+        cursor.close();
+        return documentoLista;
     }
 
 

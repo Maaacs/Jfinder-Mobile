@@ -107,7 +107,7 @@
     <EditText
         android:id="@+id/descricaoDocumento2"
         style="@style/Edit_Text_descricao"
-        android:layout_marginTop="12dp"
+
         android:hint="@string/descriçãoDocumento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.475"
