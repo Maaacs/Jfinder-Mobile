@@ -83,4 +83,68 @@ public class UsuarioDAO {
     }
 
 
+    public ArrayList<Usuario> buscarPorNome(String nome){
+
+        try {
+            ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
+            Usuario u;
+            String sqlQuery = "SELECT * FROM Usuariosdb WHERE nome LIKE '%"+ nome +"%' ";
+
+            Cursor cursor = this.bancoDeDados.rawQuery(sqlQuery, null);
+
+            while (cursor.moveToNext()) {
+                u = new Usuario(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3));
+                listaUsuarios.add(u);
+            }
+            cursor.close();
+            return listaUsuarios;
+
+        }catch (Exception e){
+            return null;
+        }
+    }
+
+    public ArrayList<Usuario> buscarPorSobrenome(String sobre){
+
+        try {
+            ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
+            Usuario u;
+            String sqlQuery = "SELECT * FROM Usuariosdb WHERE sobrenome LIKE '%"+ sobre +"%' ";
+
+            Cursor cursor = this.bancoDeDados.rawQuery(sqlQuery, null);
+
+            while (cursor.moveToNext()) {
+                u = new Usuario(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3));
+                listaUsuarios.add(u);
+            }
+            cursor.close();
+            return listaUsuarios;
+
+        }catch (Exception e){
+            return null;
+        }
+    }
+
+    public ArrayList<Usuario> buscarPorCargo(String carg){
+
+        try {
+            ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
+            Usuario u;
+            String sqlQuery = "SELECT * FROM Usuariosdb WHERE cargo LIKE '%"+ carg +"%' ";
+
+            Cursor cursor = this.bancoDeDados.rawQuery(sqlQuery, null);
+
+            while (cursor.moveToNext()) {
+                u = new Usuario(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3));
+                listaUsuarios.add(u);
+            }
+            cursor.close();
+            return listaUsuarios;
+
+        }catch (Exception e){
+            return null;
+        }
+    }
+
+
 }

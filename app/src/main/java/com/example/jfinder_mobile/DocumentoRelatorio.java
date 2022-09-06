@@ -55,7 +55,7 @@ public class DocumentoRelatorio extends AppCompatActivity {
                 ArrayAdapter<Documento> arrayAdapter = new ArrayAdapter<Documento>(this, android.R.layout.simple_list_item_1, listaDocumentos);
                 listaDeDocumentos.setAdapter(arrayAdapter);
 
-                if (docDAO.buscarPorTipo(itemAserBuscado).size() > 1){
+                if (docDAO.buscarPorTipo(itemAserBuscado).size() >= 1){
                     Toast.makeText(this, "Resultados encontrados!", Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(this, "Resultados não encontrados!", Toast.LENGTH_SHORT).show();
@@ -77,7 +77,7 @@ public class DocumentoRelatorio extends AppCompatActivity {
                 ArrayAdapter<Documento> arrayAdapter = new ArrayAdapter<Documento>(this, android.R.layout.simple_list_item_1, listaDocumentos);
                 listaDeDocumentos.setAdapter(arrayAdapter);
 
-                if (docDAO.buscarPorInteressado(itemAserBuscado).size() > 1){
+                if (docDAO.buscarPorInteressado(itemAserBuscado).size() >= 1){
                     Toast.makeText(this, "Resultados encontrados!", Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(this, "Resultados não encontrados!", Toast.LENGTH_SHORT).show();
@@ -97,7 +97,7 @@ public class DocumentoRelatorio extends AppCompatActivity {
                 ArrayAdapter<Documento> arrayAdapter = new ArrayAdapter<Documento>(this, android.R.layout.simple_list_item_1, listaDocumentos);
                 listaDeDocumentos.setAdapter(arrayAdapter);
 
-                if (docDAO.buscarPorPalavraChave(itemAserBuscado).size() > 1){
+                if (docDAO.buscarPorPalavraChave(itemAserBuscado).size() >= 1){
                     Toast.makeText(this, "Resultados encontrados!", Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(this, "Resultados não encontrados!", Toast.LENGTH_SHORT).show();
@@ -118,7 +118,7 @@ public class DocumentoRelatorio extends AppCompatActivity {
                 ArrayAdapter<Documento> arrayAdapter = new ArrayAdapter<Documento>(this, android.R.layout.simple_list_item_1, listaDocumentos);
                 listaDeDocumentos.setAdapter(arrayAdapter);
 
-                if (docDAO.buscarPorAno(itemAserBuscado).size() > 1){
+                if (docDAO.buscarPorAno(itemAserBuscado).size() >= 1){
                     Toast.makeText(this, "Resultados encontrados!", Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(this, "Resultados não encontrados!", Toast.LENGTH_SHORT).show();

@@ -10,10 +10,9 @@
     <string name="cpf2">Insira o CPF</string>
 
     <string-array name="relatorio_usuarios_array">
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
-        <item>Mars</item>
+        <item>Nome</item>
+        <item>Sobrenome</item>
+        <item>Cargo</item>
     </string-array>
 
 
