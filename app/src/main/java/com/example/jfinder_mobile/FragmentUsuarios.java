@@ -89,7 +89,7 @@ public class FragmentUsuarios extends Fragment {
         sair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in = new Intent(getActivity(), MainActivity.class);
+                Intent in = new Intent(getActivity(), Login.class);
                 startActivity(in);
             }
         });

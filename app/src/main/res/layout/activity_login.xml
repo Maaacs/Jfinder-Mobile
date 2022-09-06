@@ -8,14 +8,15 @@ o celular-->
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:fillViewport="true"
     xmlns:app="http://schemas.android.com/apk/res/android"
-    tools:ignore="NamespaceTypo">
+    tools:ignore="NamespaceTypo"
+    tools:context=".Login">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/login_tela"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background"
-        tools:context=".MainActivity">
+        tools:context=".Login">
 
         <ImageView
             android:id="@+id/logo"
@@ -86,10 +87,12 @@ o celular-->
             style="@style/Entrar_button"
             android:layout_marginTop="40dp"
             android:text="@string/entrar"
+            android:onClick="entrarBtn"
             app2:layout_constraintBaseline_toTopOf="parent"
             app2:layout_constraintEnd_toEndOf="parent"
             app2:layout_constraintStart_toStartOf="parent"
-            app2:layout_constraintTop_toBottomOf="@+id/edit_senha" />
+            app2:layout_constraintTop_toBottomOf="@+id/edit_senha"
+            tools:ignore="OnClick" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/botao_sair"

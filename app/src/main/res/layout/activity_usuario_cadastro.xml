@@ -7,7 +7,7 @@ o celular-->
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:fillViewport="true"
-    tools:context=".MainActivity"
+    tools:context=".Login"
     tools:ignore="NamespaceTypo">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,7 +15,7 @@ o celular-->
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background"
-        tools:context=".MainActivity">
+        tools:context=".Login">
 
 
         <ImageView

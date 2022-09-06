@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import java.sql.Connection;
+import java.sql.SQLException;
 
 public class BancoDeDados extends SQLiteOpenHelper {
 
@@ -24,6 +24,7 @@ public class BancoDeDados extends SQLiteOpenHelper {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
+
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_TABLE_USER);
         db.execSQL(SQL_POPULATE_TABLES);
@@ -36,5 +37,16 @@ public class BancoDeDados extends SQLiteOpenHelper {
         db.execSQL(SQL_DELETE_TABLE_DOC);
         onCreate(db);
     }
+
+    public boolean Login(String username, String password){
+        String user = "max";
+        String pass = "1";
+        if(username.equals(user) && password.equals(pass)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 
 }
