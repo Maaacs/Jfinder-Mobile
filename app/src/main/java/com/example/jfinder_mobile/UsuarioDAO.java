@@ -146,5 +146,24 @@ public class UsuarioDAO {
         }
     }
 
+    public ArrayList<Usuario> buscarUsuarioLista(String cpf) {
+
+        try {
+            ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
+            Usuario usr;
+            String sqlQuery = "SELECT * FROM Usuariosdb";
+            Cursor cursor = this.bancoDeDados.rawQuery(sqlQuery, null);
+
+            if (cursor.moveToNext()) {
+                usr = new Usuario(cursor.getString(0), cursor.getString(1), cursor.getString(2),(cursor.getString(3)));
+                listaUsuarios.add(usr);
+            }
+            cursor.close();
+            return listaUsuarios;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
 
 }

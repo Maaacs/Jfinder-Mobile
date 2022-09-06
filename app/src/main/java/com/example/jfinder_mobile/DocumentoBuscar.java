@@ -65,6 +65,8 @@ public class DocumentoBuscar extends AppCompatActivity {
                 dataArquivamentoText.setText(doc.getDataArquivamento());
                 localDeArmazenamentoText.setText(doc.getLocalCompletoDeArmazenamento());
                 descricaoText.setText(doc.getDescriçãoDocumento());*/
+
+
                 EditText N_referencia = (EditText) findViewById(R.id.num_referencia);
                 String nume_referencia = N_referencia.getText().toString();
                 DocumentoDAO docDAO = new DocumentoDAO(this);
