@@ -98,10 +98,12 @@ o celular-->
             android:id="@+id/botao_sair"
             style="@style/Sair_button"
             android:text="@string/sair"
+            android:onClick="sairBtn"
             app2:layout_constraintBaseline_toTopOf="parent"
             app2:layout_constraintEnd_toEndOf="parent"
             app2:layout_constraintStart_toStartOf="parent"
-            app2:layout_constraintTop_toBottomOf="@+id/botao_entrar" />
+            app2:layout_constraintTop_toBottomOf="@+id/botao_entrar"
+            tools:ignore="OnClick" />
 
         <ProgressBar
             android:id="@+id/progress_bar"
@@ -142,7 +144,8 @@ o celular-->
             app2:layout_constraintStart_toStartOf="parent"
             app2:layout_constraintTop_toTopOf="parent"
             app2:layout_constraintVertical_bias="0.022"
-            app2:srcCompat="@android:drawable/ic_dialog_info" />
+            app2:srcCompat="@android:drawable/ic_dialog_info"
+            tools:ignore="OnClick" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

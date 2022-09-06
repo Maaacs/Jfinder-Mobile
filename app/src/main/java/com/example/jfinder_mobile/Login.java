@@ -68,4 +68,9 @@ public class Login extends AppCompatActivity {
 
 
     }
+
+    public void sairBtn(View view) {
+        finish();
+        System.exit(0);
+    }
 }
