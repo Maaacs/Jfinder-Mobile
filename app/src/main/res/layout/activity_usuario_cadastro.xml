@@ -33,8 +33,8 @@ o celular-->
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="128dp"
-            android:layout_height="23dp"
+            android:layout_width="139dp"
+            android:layout_height="21dp"
             android:text="@string/CadastrarLogo"
             android:textColor="@color/white"
             app2:layout_constraintBottom_toBottomOf="parent"
