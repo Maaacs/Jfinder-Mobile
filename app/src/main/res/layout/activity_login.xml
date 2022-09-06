@@ -18,31 +18,34 @@ o celular-->
         android:background="@drawable/background"
         tools:context=".Login">
 
+
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-            android:layout_marginTop="60dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="40dp"
+            android:contentDescription="TODO"
             android:src="@drawable/folder"
             app2:layout_constraintEnd_toEndOf="parent"
+            app2:layout_constraintHorizontal_bias="0.498"
             app2:layout_constraintStart_toStartOf="parent"
-            app2:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="TODO" />
+            app2:layout_constraintTop_toTopOf="parent" />
 
         <View
             android:id="@+id/containerComponents"
             style="@style/ContainerComponents"
+            android:layout_marginTop="36dp"
             app2:layout_constraintEnd_toEndOf="parent"
+            app2:layout_constraintHorizontal_bias="0.578"
             app2:layout_constraintStart_toStartOf="parent"
-            app2:layout_constraintTop_toBottomOf="@id/logo" />
-
+            app2:layout_constraintTop_toBottomOf="@+id/nome_jfinder" />
 
         <ImageView
             android:id="@+id/logoUsuario"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginTop="15dp"
-            android:src="@drawable/usuario"
+            android:src="@drawable/loginuser"
             app2:layout_constraintEnd_toEndOf="@+id/containerComponents"
             app2:layout_constraintStart_toStartOf="@+id/containerComponents"
             app2:layout_constraintTop_toTopOf="@+id/containerComponents"
@@ -121,14 +124,14 @@ o celular-->
             style="@style/Text_Jfinder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="168dp"
+            android:layout_marginTop="136dp"
             android:fontFamily="cursive"
             android:text="@string/Jfinder"
             android:textSize="24sp"
             android:textStyle="bold"
             android:typeface="normal"
             app2:layout_constraintEnd_toEndOf="parent"
-            app2:layout_constraintHorizontal_bias="0.53"
+            app2:layout_constraintHorizontal_bias="0.507"
             app2:layout_constraintStart_toStartOf="parent"
             app2:layout_constraintTop_toTopOf="parent" />
 
@@ -140,10 +143,9 @@ o celular-->
             android:onClick="sobre"
             app2:layout_constraintBottom_toBottomOf="parent"
             app2:layout_constraintEnd_toEndOf="parent"
-            app2:layout_constraintHorizontal_bias="0.959"
             app2:layout_constraintStart_toStartOf="parent"
             app2:layout_constraintTop_toTopOf="parent"
-            app2:layout_constraintVertical_bias="0.022"
+            app2:layout_constraintVertical_bias="0.926"
             app2:srcCompat="@android:drawable/ic_dialog_info"
             tools:ignore="OnClick" />
 

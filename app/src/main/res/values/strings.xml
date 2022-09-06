@@ -2,12 +2,17 @@
 
     <!-- TODO: Usuarios-->
     <string name="Usuarios">Jfinder | Usuários</string>
-    <string name="usuario">Usuario</string>
+    <string name="usuario">Usuário</string>
     <string name="nome">Nome</string>
     <string name="sobrenome">Sobrenome</string>
     <string name="cpf">CPF</string>
     <string name="cargo">Cargo</string>
     <string name="cpf2">Insira o CPF</string>
+
+    <string name="CadastrarLogo">Cadastrar | Usuários</string>
+    <string name="RemoverLogo">Remover | Usuários</string>
+    <string name="BuscarLogo">Buscar | Usuários</string>
+    <string name="AlterarLogo">Alterar | Usuários</string>
 
     <string-array name="relatorio_usuarios_array">
         <item>Nome</item>
@@ -29,6 +34,11 @@
     <string name="localCompletoDeArmazenamento">Local de Armazenamento</string>
     <string name="DocumentoAlterar">Alterar | Documentos</string>
 
+    <string name="CadastrarLogoDoc">Cadastrar | Documentos</string>
+    <string name="RemoverLogoDoc">Remover | Documentos</string>
+    <string name="BuscarLogoDoc">Buscar | Documentos</string>
+    <string name="AlterarLogoDoc">Alterar | Documentos</string>
+
     <string-array name="relatorio_documentos_array">
         <item>Ano</item>
         <item>Tipo</item>
@@ -40,6 +50,9 @@
     <string name="Relatorios">Jfinder | Relatórios</string>
     <string name="relatorioUsuarios">Usuarios</string>
     <string name="relatorioDocumentos">Documentos</string>
+
+    <string name="RelatorioLogoUser">Relatório | Usuários</string>
+    <string name="RelatorioLogoDoc">Relatório | Documentos</string>
 
     <!-- TODO: CRUD-->
     <string name="cadastrar">Cadastrar</string>
@@ -55,7 +68,7 @@
     <string name="Jfinder">Jfinder</string>
     <string name="todo">TODO</string>
     <string name="insira">Insira a busca</string>
-    <string name="descricao">Aplicação de gerenciamento de Usuários e Documentos. A aplicação contém ferramentas para cadastro, remoção, alteração e consulta de documentos e usuários em um banco de dados.</string>
+    <string name="descricao">Aplicação para gerenciamento de Usuários e Documentos. Contém ferramentas para cadastro, remoção, alteração e consulta de usuários e documentos em um banco de dados.</string>
 
 
 </resources>

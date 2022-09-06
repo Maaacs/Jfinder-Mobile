@@ -10,22 +10,12 @@
     android:background="@drawable/background">
 
 
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".DocumentoAlterar"
-    android:background="@drawable/background">
-
-
-
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="84dp"
-        android:layout_height="74dp"
+        android:layout_width="67dp"
+        android:layout_height="60dp"
         android:contentDescription="@string/todo"
-        android:src="@drawable/folder"
+        android:src="@drawable/docadd"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -37,7 +27,7 @@
         android:id="@+id/textView"
         android:layout_width="157dp"
         android:layout_height="21dp"
-        android:text="@string/Documentos"
+        android:text="@string/CadastrarLogoDoc"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +36,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.036" />
 
-    <ImageView
+<!--    <ImageView
         android:id="@+id/logoUsuario"
         android:layout_width="60dp"
         android:layout_height="60dp"
@@ -68,7 +58,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoUsuario"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0" />-->
 
     <EditText
         android:id="@+id/numeroReferencia"

@@ -14,16 +14,16 @@ o celular-->
         android:id="@+id/cadastro_usuario"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background"
+        android:background="@drawable/backgroud2"
         tools:context=".Login">
 
 
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="84dp"
-            android:layout_height="74dp"
+            android:layout_width="72dp"
+            android:layout_height="64dp"
             android:contentDescription="@string/todo"
-            android:src="@drawable/folder"
+            android:src="@drawable/adduser"
             app2:layout_constraintBottom_toBottomOf="parent"
             app2:layout_constraintEnd_toEndOf="parent"
             app2:layout_constraintHorizontal_bias="0.0"
@@ -35,7 +35,7 @@ o celular-->
             android:id="@+id/textView"
             android:layout_width="128dp"
             android:layout_height="23dp"
-            android:text="@string/Usuarios"
+            android:text="@string/CadastrarLogo"
             android:textColor="@color/white"
             app2:layout_constraintBottom_toBottomOf="parent"
             app2:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +44,7 @@ o celular-->
             app2:layout_constraintTop_toTopOf="parent"
             app2:layout_constraintVertical_bias="0.036" />
 
-        <ImageView
+<!--        <ImageView
             android:id="@+id/logoUsuario"
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -65,19 +65,19 @@ o celular-->
             app2:layout_constraintHorizontal_bias="0.501"
             app2:layout_constraintStart_toStartOf="parent"
             app2:layout_constraintTop_toBottomOf="@+id/logoUsuario"
-            app2:layout_constraintVertical_bias="0.0" />
+            app2:layout_constraintVertical_bias="0.0" />-->
 
         <EditText
             android:id="@+id/nome"
             style="@style/Edit_Text"
-            android:layout_marginTop="264dp"
+            android:layout_marginTop="196dp"
             android:autofillHints=""
             android:hint="@string/nome"
             android:inputType="text"
             android:minHeight="48dp"
             app2:layout_constraintEnd_toEndOf="parent"
             app2:layout_constraintStart_toStartOf="parent"
-            app2:layout_constraintTop_toTopOf="parent" />
+            app2:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <EditText
             android:id="@+id/sobrenome"

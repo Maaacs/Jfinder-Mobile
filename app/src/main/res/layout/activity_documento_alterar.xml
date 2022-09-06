@@ -12,8 +12,8 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="84dp"
-        android:layout_height="74dp"
+        android:layout_width="67dp"
+        android:layout_height="60dp"
         android:contentDescription="@string/todo"
         android:src="@drawable/docaltera"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -8,28 +8,28 @@
         android:id="@+id/login_tela"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background"
+        android:background="@drawable/backgroud2"
         tools:context=".UsuarioAlterar">
 
 
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="84dp"
-            android:layout_height="74dp"
-            android:contentDescription="@string/todo"
-            android:src="@drawable/folder"
-            app2:layout_constraintBottom_toBottomOf="parent"
-            app2:layout_constraintEnd_toEndOf="parent"
-            app2:layout_constraintHorizontal_bias="0.0"
-            app2:layout_constraintStart_toStartOf="parent"
-            app2:layout_constraintTop_toTopOf="parent"
-            app2:layout_constraintVertical_bias="0.0" />
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="70dp"
+        android:layout_height="59dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/alterarusuario"
+        app2:layout_constraintBottom_toBottomOf="parent"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintHorizontal_bias="0.0"
+        app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toTopOf="parent"
+        app2:layout_constraintVertical_bias="0.007" />
 
-        <TextView
+    <TextView
             android:id="@+id/textView"
             android:layout_width="128dp"
             android:layout_height="23dp"
-            android:text="@string/Usuarios"
+            android:text="@string/AlterarLogo"
             android:textColor="@color/white"
             app2:layout_constraintBottom_toBottomOf="parent"
             app2:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +38,7 @@
             app2:layout_constraintTop_toTopOf="parent"
             app2:layout_constraintVertical_bias="0.036" />
 
-        <ImageView
+<!--        <ImageView
             android:id="@+id/logoUsuario"
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -47,7 +47,7 @@
             app2:layout_constraintEnd_toEndOf="parent"
             app2:layout_constraintHorizontal_bias="0.498"
             app2:layout_constraintStart_toStartOf="parent"
-            app2:layout_constraintTop_toTopOf="parent" />
+            app2:layout_constraintTop_toTopOf="parent" />-->
 
         <EditText
             android:id="@+id/nome"
@@ -82,7 +82,7 @@
         app2:layout_constraintStart_toStartOf="parent"
         app2:layout_constraintTop_toBottomOf="@+id/sobrenome" />
 
-    <TextView
+<!--    <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -93,7 +93,7 @@
             app2:layout_constraintHorizontal_bias="0.501"
             app2:layout_constraintStart_toStartOf="parent"
             app2:layout_constraintTop_toBottomOf="@+id/logoUsuario"
-            app2:layout_constraintVertical_bias="0.0" />
+            app2:layout_constraintVertical_bias="0.0" />-->
 
 
     <EditText

@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="84dp"
-        android:layout_height="74dp"
+        android:layout_width="67dp"
+        android:layout_height="60dp"
         android:contentDescription="@string/todo"
         android:src="@drawable/documentos"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,7 +25,7 @@
         android:id="@+id/textView"
         android:layout_width="157dp"
         android:layout_height="21dp"
-        android:text="@string/Documentos"
+        android:text="@string/RelatorioLogoDoc"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +44,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.608"
-        app:layout_constraintStart_toEndOf="@+id/cpf_editText"
+        app:layout_constraintStart_toEndOf="@+id/itemBusca"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.231"
         tools:ignore="MissingConstraints,OnClick" />
@@ -52,13 +52,13 @@
 
     <Spinner
         android:id="@+id/spinnerDocumentos"
-        android:layout_width="187dp"
+        android:layout_width="190dp"
         android:layout_height="34dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/spinner_custom"
         android:dropDownWidth="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.241"
+        app:layout_constraintHorizontal_bias="0.223"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/itemBusca" />
 

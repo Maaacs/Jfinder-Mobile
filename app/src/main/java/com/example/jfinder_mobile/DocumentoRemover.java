@@ -49,11 +49,11 @@ public class DocumentoRemover extends AppCompatActivity {
             //define o titulo
             builder.setTitle("Documento removido com sucesso!");
             //define a mensagem
-            builder.setMessage(documento.getTipoDeDocumento() + " foi removido com sucesso!");
+            builder.setMessage("Documento: " + documento.getTipoDeDocumento());
 
-            builder.setPositiveButton("Positivo", new DialogInterface.OnClickListener() {
+            builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface arg0, int arg1) {
-                    Toast.makeText(DocumentoRemover.this, "positivo=" + arg1, Toast.LENGTH_SHORT).show();
+                    /*Toast.makeText(DocumentoRemover.this, "positivo=" + arg1, Toast.LENGTH_SHORT).show();*/
                 }
             });
 
