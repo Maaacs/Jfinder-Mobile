@@ -35,7 +35,7 @@ public class DocumentoAlterar extends AppCompatActivity {
 
 
         if (doc == null) {
-/*            tipoDeDocumentoText.setText("Não encontrado");
+/*          tipoDeDocumentoText.setText("Não encontrado");
             interessadoText.setText("Não encontrado");
             tipoDeArmazenamentoText.setText("Não encontrado");
             dataArquivamentoText.setText("--/--/--");
@@ -66,7 +66,7 @@ public class DocumentoAlterar extends AppCompatActivity {
         TextView localDeArmazenamentoText = (TextView) findViewById(R.id.localDeArmazenamento2);
         TextView descricaoText = (TextView) findViewById(R.id.descricaoDocumento2);
 
-  
+
         String tipoDeDocumentoCadastra = tipoDeDocumentoText.getText().toString();
         String interessadoCadastra = interessadoText.getText().toString();
         String tipoDeArmazenamentoCadastra = tipoDeArmazenamentoText.getText().toString();
