@@ -29,27 +29,40 @@ public class DocumentoCadastro extends AppCompatActivity {
         EditText descriçãoDocumentoTXT = (EditText) findViewById(R.id.descricaoDocumento);
         EditText localCompletoDeArmazenamentoTXT = (EditText) findViewById(R.id.localDeArmazenamento);
 
+        String numeroUnicoReferenciaCadastra = numeroUnicoReferenciaTXT.getText().toString();
+        String tipoDeDocumentoCadastra = tipoDeDocumentoTXT.getText().toString();
+        String interessadoCadastra = interessadoTXT.getText().toString();
+        String tipoDeArmazenamentoCadastra = tipoDeArmazenamentoTXT.getText().toString();
+        String dataArquivamentoCadastra = dataArquivamentoTXT.getText().toString();
+        String descriçãoDocumentoCadastra = descriçãoDocumentoTXT.getText().toString();
+        String localCompletoDeArmazenamentoCadastra = localCompletoDeArmazenamentoTXT.getText().toString();
+
+
         Documento documentos = new Documento(numeroUnicoReferenciaTXT.getText().toString(), tipoDeDocumentoTXT.getText().toString(), interessadoTXT.getText().toString(), tipoDeArmazenamentoTXT.getText().toString(), dataArquivamentoTXT.getText().toString(), descriçãoDocumentoTXT.getText().toString(), localCompletoDeArmazenamentoTXT.getText().toString());
         DocumentoDAO dDAO = new DocumentoDAO(this);
 
-        if(dDAO.addDocumento(documentos)){
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle("Documento adicionado com sucesso!");
-
-            builder.setMessage("Nº Referência: " + numeroUnicoReferenciaTXT.getText().toString() + "\nTipo de Documento: " + tipoDeDocumentoTXT.getText().toString() + "\n Interessado: " +
-                    interessadoTXT.getText().toString() + "\n Tipo de Armazenamento: " + tipoDeArmazenamentoTXT.getText().toString() + "\n Data de Arquivamento: " + dataArquivamentoTXT.getText().toString() + "\n Local de Armazenamento: " + localCompletoDeArmazenamentoTXT.getText().toString() + "\n Descrição: " + descriçãoDocumentoTXT.getText().toString());
-            builder.setPositiveButton("Positivo", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface arg0, int arg1) {
-                    Toast.makeText(DocumentoCadastro.this, "positivo=" + arg1, Toast.LENGTH_SHORT).show();
-                }
-            });
-
-            alerta = builder.create();
-            //Exibe
-            alerta.show();
-
+        if (numeroUnicoReferenciaCadastra.matches("") || tipoDeDocumentoCadastra.matches("") || interessadoCadastra.matches("") || tipoDeArmazenamentoCadastra.matches("") || dataArquivamentoCadastra.matches("") || descriçãoDocumentoCadastra.matches("") || localCompletoDeArmazenamentoCadastra.matches("")){
+            Toast.makeText(this, "Dados incompletos!", Toast.LENGTH_SHORT).show();
         }else{
-            Toast.makeText(DocumentoCadastro.this, "Erro ao cadastrar", Toast.LENGTH_SHORT).show();
+            if(dDAO.addDocumento(documentos)){
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Documento adicionado com sucesso!");
+
+                builder.setMessage("Nº Referência: " + numeroUnicoReferenciaTXT.getText().toString() + "\nTipo de Documento: " + tipoDeDocumentoTXT.getText().toString() + "\n Interessado: " +
+                        interessadoTXT.getText().toString() + "\n Tipo de Armazenamento: " + tipoDeArmazenamentoTXT.getText().toString() + "\n Data de Arquivamento: " + dataArquivamentoTXT.getText().toString() + "\n Local de Armazenamento: " + localCompletoDeArmazenamentoTXT.getText().toString() + "\n Descrição: " + descriçãoDocumentoTXT.getText().toString());
+                builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface arg0, int arg1) {
+                    }
+                });
+
+                alerta = builder.create();
+                alerta.show();
+
+            }else{
+                Toast.makeText(DocumentoCadastro.this, "Tente novamente!", Toast.LENGTH_SHORT).show();
+            }
         }
+
+
     }
 }

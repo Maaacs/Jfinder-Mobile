@@ -27,19 +27,22 @@ public class DocumentoAlterar extends AppCompatActivity {
         TextView localDeArmazenamentoText = (TextView) findViewById(R.id.localDeArmazenamento2);
         TextView descricaoText = (TextView) findViewById(R.id.descricaoDocumento2);
 
+
+
         String num_referencia = Nreferencia.getText().toString();
         DocumentoDAO d = new DocumentoDAO(this);
         Documento doc = d.buscarDocumento(num_referencia);
 
+
         if (doc == null) {
-            tipoDeDocumentoText.setText("Não encontrado");
+/*            tipoDeDocumentoText.setText("Não encontrado");
             interessadoText.setText("Não encontrado");
             tipoDeArmazenamentoText.setText("Não encontrado");
             dataArquivamentoText.setText("--/--/--");
             localDeArmazenamentoText.setText("Não encontrado");
-            descricaoText.setText("Não encontrado");
+            descricaoText.setText("Não encontrado");*/
 
-            Toast.makeText(this, "ErrOR", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Documento não encontrado!", Toast.LENGTH_SHORT).show();
 
         } else {
             tipoDeDocumentoText.setText(doc.getTipoDeDocumento());
@@ -63,12 +66,25 @@ public class DocumentoAlterar extends AppCompatActivity {
         TextView localDeArmazenamentoText = (TextView) findViewById(R.id.localDeArmazenamento2);
         TextView descricaoText = (TextView) findViewById(R.id.descricaoDocumento2);
 
+  
+        String tipoDeDocumentoCadastra = tipoDeDocumentoText.getText().toString();
+        String interessadoCadastra = interessadoText.getText().toString();
+        String tipoDeArmazenamentoCadastra = tipoDeArmazenamentoText.getText().toString();
+        String dataArquivamentoCadastra = dataArquivamentoText.getText().toString();
+        String descriçãoDocumentoCadastra = descricaoText.getText().toString();
+        String localCompletoDeArmazenamentoCadastra = localDeArmazenamentoText.getText().toString();
+
         DocumentoDAO d = new DocumentoDAO(this);
 
-        if (d.alterarDocumento(tipoDeDocumentoText.getText().toString(), interessadoText.getText().toString(), tipoDeArmazenamentoText.getText().toString(), dataArquivamentoText.getText().toString(), localDeArmazenamentoText.getText().toString(), descricaoText.getText().toString(), num_referencia.getText().toString())) {
-            Toast.makeText(DocumentoAlterar.this, "Sucesso!", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(DocumentoAlterar.this, "Tente novamente!", Toast.LENGTH_SHORT).show();
+        if (tipoDeDocumentoCadastra.matches("") || interessadoCadastra.matches("") || tipoDeArmazenamentoCadastra.matches("") || dataArquivamentoCadastra.matches("") || descriçãoDocumentoCadastra.matches("") || localCompletoDeArmazenamentoCadastra.matches("")){
+            Toast.makeText(this, "Dados incompletos!", Toast.LENGTH_SHORT).show();
+        }else{
+
+            if (d.alterarDocumento(tipoDeDocumentoText.getText().toString(), interessadoText.getText().toString(), tipoDeArmazenamentoText.getText().toString(), dataArquivamentoText.getText().toString(), localDeArmazenamentoText.getText().toString(), descricaoText.getText().toString(), num_referencia.getText().toString())) {
+                Toast.makeText(DocumentoAlterar.this, "Sucesso!", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(DocumentoAlterar.this, "Tente novamente!", Toast.LENGTH_SHORT).show();
+            }
         }
 
     }

@@ -31,13 +31,11 @@ public class UsuarioCadastro extends AppCompatActivity {
         String cargo = cargoTXT.getText().toString();
 
         Usuario usuarios = new Usuario(nomeTXT.getText().toString(), sobrenomeTXT.getText().toString(), cpfTXT.getText().toString(), cargoTXT.getText().toString());
-
         UsuarioDAO uDAO = new UsuarioDAO(this);
 
-        if (nome.matches("") && sobrenome.matches("") && cpf.matches("") && cargo.matches("")){
+        if (nome.matches("") || sobrenome.matches("") || cpf.matches("") || cargo.matches("")){
             Toast.makeText(this, "Dados não preenchidos!", Toast.LENGTH_SHORT).show();
         }else{
-
             if (uDAO.addUsuario(usuarios)){//adiciona produto em uDAO
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Usuario adicionado com sucesso!");

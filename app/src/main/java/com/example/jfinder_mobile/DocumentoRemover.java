@@ -40,7 +40,7 @@ public class DocumentoRemover extends AppCompatActivity {
         Documento documento = doc.buscarDocumento(numRef.getText().toString());
 
         if (documento == null) {
-            Toast.makeText(DocumentoRemover.this, "Não encontrei =(", Toast.LENGTH_SHORT).show();
+            Toast.makeText(DocumentoRemover.this, "Documento não encontrado!", Toast.LENGTH_SHORT).show();
 
         } else {
             doc.removerDocumento(documento.getNumeroUnicoReferencia());
