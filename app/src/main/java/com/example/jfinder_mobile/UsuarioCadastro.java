@@ -25,29 +25,38 @@ public class UsuarioCadastro extends AppCompatActivity {
         EditText cpfTXT = (EditText) findViewById(R.id.cpf);
         EditText cargoTXT = (EditText) findViewById(R.id.cargo);
 
+        String nome = nomeTXT.getText().toString();
+        String sobrenome = sobrenomeTXT.getText().toString();
+        String cpf = cpfTXT.getText().toString();
+        String cargo = cargoTXT.getText().toString();
+
         Usuario usuarios = new Usuario(nomeTXT.getText().toString(), sobrenomeTXT.getText().toString(), cpfTXT.getText().toString(), cargoTXT.getText().toString());
 
         UsuarioDAO uDAO = new UsuarioDAO(this);
 
-        if (uDAO.addUsuario(usuarios)){//adiciona produto em uDAO
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle("Usuario adicionado com sucesso");
+        if (nome.matches("") && sobrenome.matches("") && cpf.matches("") && cargo.matches("")){
+            Toast.makeText(this, "Dados não preenchidos!", Toast.LENGTH_SHORT).show();
+        }else{
 
-            builder.setMessage("Nome: " + nomeTXT.getText().toString() + "\nSobrenome: " + sobrenomeTXT.getText().toString() + "\n CPF: " +
-                    cpfTXT.getText().toString() + "\n Cargo: " + cargoTXT.getText().toString());
-            builder.setPositiveButton("Positivo", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface arg0, int arg1) {
-                    Toast.makeText(UsuarioCadastro.this, "positivo=" + arg1, Toast.LENGTH_SHORT).show();
-                }
-            });
+            if (uDAO.addUsuario(usuarios)){//adiciona produto em uDAO
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Usuario adicionado com sucesso!");
+                builder.setMessage("Nome: " + nomeTXT.getText().toString() + "\nSobrenome: " + sobrenomeTXT.getText().toString() + "\n CPF: " +
+                        cpfTXT.getText().toString() + "\n Cargo: " + cargoTXT.getText().toString());
+                builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface arg0, int arg1) {
+                       /* Toast.makeText(UsuarioCadastro.this, "Positivo!", Toast.LENGTH_SHORT).show();*/
+                    }
+                });
+                alerta = builder.create();
+                alerta.show();
 
-            alerta = builder.create();
-            //Exibe
-            alerta.show();
-
-        }else {
-            Toast.makeText(UsuarioCadastro.this, "Erro ao cadastrar", Toast.LENGTH_SHORT).show();
+            }else {
+                Toast.makeText(UsuarioCadastro.this, "Erro ao cadastrar", Toast.LENGTH_SHORT).show();
+            }
         }
+
+
     }
 
 

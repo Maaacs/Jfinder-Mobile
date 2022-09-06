@@ -24,24 +24,32 @@ public class UsuarioBuscar extends AppCompatActivity {
         TextView cpf_txt = (TextView) findViewById(R.id.cpfText);
         TextView cargo_txt = (TextView) findViewById(R.id.cargoText);
 
+        String cpfBusca = cpf.getText().toString();
+
         String cpf_num = cpf.getText().toString();
         UsuarioDAO p = new UsuarioDAO(this);
         Usuario usr = p.buscarUsuario(cpf_num);
 
-        if (usr == null) {
-            nome_txt.setText("Não encontrado");
-            sobrenome_txt.setText("Não encontrado");
-            cpf_txt.setText("Não encontrado");
-            cargo_txt.setText("Não encontrado");
-            Toast.makeText(this, "ErrOR", Toast.LENGTH_SHORT).show();
+        if (cpfBusca.matches("")) {
+            Toast.makeText(this, "Insira o CPF!", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            if (usr == null) {
+                nome_txt.setText("Não encontrado");
+                sobrenome_txt.setText("Não encontrado");
+                cpf_txt.setText("Não encontrado");
+                cargo_txt.setText("Não encontrado");
+                Toast.makeText(this, "Usuário não encontrado!", Toast.LENGTH_SHORT).show();
 
-        } else {
+            } else {
 
-            nome_txt.setText(usr.getPrimeiroNome());
-            sobrenome_txt.setText(usr.getUltimoNome());
-            cpf_txt.setText(usr.getCPF());
-            cargo_txt.setText(usr.getCargo());
-            Toast.makeText(this, "Usuário encontrado!", Toast.LENGTH_SHORT).show();
+                nome_txt.setText(usr.getPrimeiroNome());
+                sobrenome_txt.setText(usr.getUltimoNome());
+                cpf_txt.setText(usr.getCPF());
+                cargo_txt.setText(usr.getCargo());
+                Toast.makeText(this, "Usuário encontrado!", Toast.LENGTH_SHORT).show();
+
+            }
 
         }
     }

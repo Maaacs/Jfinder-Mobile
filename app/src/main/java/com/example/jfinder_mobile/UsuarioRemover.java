@@ -41,20 +41,18 @@ public class UsuarioRemover extends AppCompatActivity {
         Usuario usuario = usr.buscarUsuario(cpf.getText().toString());
 
         if (usuario == null) {
-            Toast.makeText(UsuarioRemover.this, "Não encontrei =(", Toast.LENGTH_SHORT).show();
+            Toast.makeText(UsuarioRemover.this, "Usuário não encontrado!", Toast.LENGTH_SHORT).show();
 
         } else {
             usr.removerUsuario(usuario.getCPF());
 
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            //define o titulo
             builder.setTitle("Usuário removido com sucesso");
-            //define a mensagem
             builder.setMessage(usuario.getPrimeiroNome() + " foi removido com sucesso!");
 
-            builder.setPositiveButton("Positivo", new DialogInterface.OnClickListener() {
+            builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface arg0, int arg1) {
-                    Toast.makeText(UsuarioRemover.this, "positivo=" + arg1, Toast.LENGTH_SHORT).show();
+                    /*Toast.makeText(UsuarioRemover.this, "positivo=" + arg1, Toast.LENGTH_SHORT).show();*/
                 }
             });
 
