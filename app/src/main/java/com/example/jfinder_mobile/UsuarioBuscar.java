@@ -48,7 +48,6 @@ public class UsuarioBuscar extends AppCompatActivity {
                 cpf_txt.setText(usr.getCPF());
                 cargo_txt.setText(usr.getCargo());
                 Toast.makeText(this, "Usuário encontrado!", Toast.LENGTH_SHORT).show();
-
             }
 
         }

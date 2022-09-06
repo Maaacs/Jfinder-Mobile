@@ -47,8 +47,8 @@ public class UsuarioRemover extends AppCompatActivity {
             usr.removerUsuario(usuario.getCPF());
 
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle("Usuário removido com sucesso");
-            builder.setMessage(usuario.getPrimeiroNome() + " foi removido com sucesso!");
+            builder.setTitle("Usuário removido com sucesso!");
+            builder.setMessage("Usuário: " + usuario.getPrimeiroNome() );
 
             builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface arg0, int arg1) {

@@ -63,17 +63,22 @@ public class UsuarioAlterar extends AppCompatActivity {
         String nomeBusca = nome_txt.getText().toString();
         String sobrenomeBusca = sobrenome_txt.getText().toString();
         String cargoBusca = cargo_txt.getText().toString();
+        String cpf = cpf_txt.getText().toString();
 
         UsuarioDAO p = new UsuarioDAO(this);
 
-        if (nomeBusca.matches("") || sobrenomeBusca.matches("") || cargoBusca.matches("")) {
-            Toast.makeText(this, "Insira todos os dados!", Toast.LENGTH_SHORT).show();
-        }else{
-            if(p.alterarUsuario(nome_txt.getText().toString(), sobrenome_txt.getText().toString(),cargo_txt.getText().toString(), cpf_txt.getText().toString())){
-                Toast.makeText(UsuarioAlterar.this, "Alterado com sucesso!", Toast.LENGTH_SHORT).show();
+        if (p.buscarUsuario(cpf) != null){
+            if (nomeBusca.matches("") || sobrenomeBusca.matches("") || cargoBusca.matches("")) {
+                Toast.makeText(this, "Insira todos os dados!", Toast.LENGTH_SHORT).show();
             }else{
-                Toast.makeText(UsuarioAlterar.this, "Insira os dados corretamente!", Toast.LENGTH_SHORT).show();
+                if(p.alterarUsuario(nome_txt.getText().toString(), sobrenome_txt.getText().toString(),cargo_txt.getText().toString(), cpf_txt.getText().toString())){
+                    Toast.makeText(UsuarioAlterar.this, "Alterado com sucesso!", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(UsuarioAlterar.this, "Insira os dados corretamente!", Toast.LENGTH_SHORT).show();
+                }
             }
+        }else{
+            Toast.makeText(UsuarioAlterar.this, "Insira um CPF válido e realize a busca!", Toast.LENGTH_SHORT).show();
         }
 
     }

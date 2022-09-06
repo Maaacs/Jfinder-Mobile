@@ -38,7 +38,7 @@ public class UsuarioCadastro extends AppCompatActivity {
         }else{
             if (uDAO.addUsuario(usuarios)){//adiciona produto em uDAO
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle("Usuario adicionado com sucesso!");
+                builder.setTitle("Cadastro realizado com sucesso!");
                 builder.setMessage("Nome: " + nomeTXT.getText().toString() + "\nSobrenome: " + sobrenomeTXT.getText().toString() + "\n CPF: " +
                         cpfTXT.getText().toString() + "\n Cargo: " + cargoTXT.getText().toString());
                 builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
@@ -50,7 +50,7 @@ public class UsuarioCadastro extends AppCompatActivity {
                 alerta.show();
 
             }else {
-                Toast.makeText(UsuarioCadastro.this, "Erro ao cadastrar", Toast.LENGTH_SHORT).show();
+                Toast.makeText(UsuarioCadastro.this, "CPF já cadastrado!", Toast.LENGTH_SHORT).show();
             }
         }
 
