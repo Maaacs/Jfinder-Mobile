@@ -1,5 +1,5 @@
 ## 📱 Preview
-![APP](https://user-images.githubusercontent.com/56925726/188957193-8b29ff11-efbf-412e-8ddf-32b14608343d.png)
+![App](https://user-images.githubusercontent.com/56925726/188957748-e1196c89-f5b8-426a-89fa-8a8e4e51f21b.png)
 
 ## ⁉️ About this project
 
