@@ -7,7 +7,6 @@ o celular-->
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:fillViewport="true"
-    xmlns:app="http://schemas.android.com/apk/res/android"
     tools:ignore="NamespaceTypo"
     tools:context=".Login">
 

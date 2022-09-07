@@ -16,6 +16,7 @@
         <item name="android:maxLength">25</item> <!--limite de caracteres-->
         <item name="android:padding">10dp</item>
         <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:layout_marginLeft">40dp</item>
         <item name="android:layout_marginRight">40dp</item>
         <item name="android:layout_marginTop">15dp</item>
@@ -27,6 +28,7 @@
         <item name="android:maxLength">11</item> <!--limite de caracteres-->
         <item name="android:padding">10dp</item>
         <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:layout_marginLeft">40dp</item>
         <item name="android:layout_marginRight">40dp</item>
         <item name="android:layout_marginTop">15dp</item>
@@ -81,6 +83,7 @@
         <item name="android:padding">10dp</item>
         <item name="android:maxLength">25</item> <!--limite de caracteres-->
         <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:layout_marginLeft">40dp</item>
         <item name="android:layout_marginRight">40dp</item>
         <item name="android:layout_marginTop">15dp</item>
@@ -92,6 +95,7 @@
         <item name="android:padding">10dp</item>
         <item name="android:maxLength">11</item> <!--limite de caracteres-->
         <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:layout_marginLeft">40dp</item>
         <item name="android:layout_marginRight">40dp</item>
         <item name="android:layout_marginTop">15dp</item>
@@ -103,6 +107,7 @@
         <item name="android:padding">10dp</item>
         <item name="android:maxLength">11</item> <!--limite de caracteres-->
         <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:layout_marginLeft">40dp</item>
         <item name="android:layout_marginRight">40dp</item>
         <item name="android:layout_marginTop">15dp</item>
@@ -112,7 +117,8 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">70dp</item>
         <item name="android:background">@drawable/edit_text</item>
-        <item name="android:maxLength">300</item> <!--limite de caracteres-->
+        <item name="android:maxLength">500</item> <!--limite de caracteres-->
+        <item name="android:textColor">@color/black</item>
         <item name="android:paddingLeft">10dp</item>
 
         <item name="android:textSize">15sp</item>
