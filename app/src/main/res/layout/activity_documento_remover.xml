@@ -38,11 +38,11 @@
 
     <ListView
         android:id="@+id/lista"
-        android:layout_width="402dp"
-        android:layout_height="320dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="359dp"
+        android:layout_height="313dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="9dp"
+        android:layout_marginEnd="10dp"
         app2:layout_constraintEnd_toEndOf="parent"
         app2:layout_constraintStart_toStartOf="parent"
         app2:layout_constraintTop_toBottomOf="@+id/logo" />
@@ -50,7 +50,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botao_remover"
         style="@style/botoes"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="30dp"
         android:onClick="btnremover"
         android:text="@string/remover"
         app2:layout_constraintBottom_toBottomOf="parent"

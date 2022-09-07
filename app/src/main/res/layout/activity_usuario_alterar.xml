@@ -99,15 +99,18 @@
     <EditText
         android:id="@+id/cpf"
         style="@style/Edit_Text_Compact_CPF"
+        android:layout_width="190dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="40dp"
         android:hint="@string/cpf2"
         android:inputType="number"
         android:maxLength="11"
         app2:layout_constraintBottom_toBottomOf="parent"
-        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintEnd_toStartOf="@+id/botao_buscar"
         app2:layout_constraintHorizontal_bias="0.0"
         app2:layout_constraintStart_toStartOf="parent"
         app2:layout_constraintTop_toTopOf="parent"
-        app2:layout_constraintVertical_bias="0.27" />
+        app2:layout_constraintVertical_bias="0.269" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botao_buscar"
@@ -117,8 +120,6 @@
         android:text="@string/buscar"
         app2:layout_constraintBottom_toBottomOf="parent"
         app2:layout_constraintEnd_toEndOf="parent"
-        app2:layout_constraintHorizontal_bias="1.0"
-        app2:layout_constraintStart_toEndOf="@+id/cpf"
         app2:layout_constraintTop_toTopOf="parent"
         app2:layout_constraintVertical_bias="0.27"
         tools:ignore="OnClick" />

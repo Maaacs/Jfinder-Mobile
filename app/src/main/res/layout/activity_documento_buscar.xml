@@ -154,24 +154,27 @@
     <EditText
         android:id="@+id/num_referencia"
         style="@style/Edit_Text_Compact_CPF"
+        android:layout_width="183dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
         android:hint="@string/numeroUnicoReferencia"
         android:inputType="number"
         android:maxLength="11"
         app2:layout_constraintBottom_toBottomOf="parent"
+        app2:layout_constraintEnd_toStartOf="@+id/botao_buscar"
+        app2:layout_constraintHorizontal_bias="0.097"
         app2:layout_constraintStart_toStartOf="parent"
         app2:layout_constraintTop_toTopOf="parent"
-        app2:layout_constraintVertical_bias="0.305" />
+        app2:layout_constraintVertical_bias="0.303" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botao_buscar"
         style="@style/botoes"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="40dp"
         android:onClick="btnbuscar"
         android:text="@string/buscar"
         app2:layout_constraintBottom_toBottomOf="parent"
         app2:layout_constraintEnd_toEndOf="parent"
-        app2:layout_constraintHorizontal_bias="0.571"
-        app2:layout_constraintStart_toEndOf="@+id/num_referencia"
         app2:layout_constraintTop_toTopOf="parent"
         app2:layout_constraintVertical_bias="0.305"
         tools:ignore="OnClick" />

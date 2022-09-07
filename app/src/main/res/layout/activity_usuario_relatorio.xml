@@ -37,13 +37,11 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botao_buscar"
         style="@style/botoes"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="40dp"
         android:onClick="consultaUsuarioPorDiferentesEntradas"
         android:text="@string/buscar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.608"
-        app:layout_constraintStart_toEndOf="@+id/itemBusca_text"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.231"
         tools:ignore="MissingConstraints,OnClick" />
@@ -52,33 +50,35 @@
         android:id="@+id/spinnerUsuarios"
         android:layout_width="190dp"
         android:layout_height="34dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/spinner_custom"
         android:dropDownWidth="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintHorizontal_bias="0.011"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/itemBusca_text" />
 
     <EditText
         android:id="@+id/itemBusca_text"
         style="@style/Edit_Text_Compact2"
+        android:layout_marginStart="40dp"
         android:hint="@string/insira"
         android:maxLength="11"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintEnd_toStartOf="@+id/botao_buscar"
+        app:layout_constraintHorizontal_bias="0.048"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.232" />
+        app:layout_constraintVertical_bias="0.23" />
 
     <ListView
         android:id="@+id/lista"
-        android:layout_width="393dp"
+        android:layout_width="335dp"
         android:layout_height="247dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="88dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerUsuarios" />
