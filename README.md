@@ -14,8 +14,8 @@ https://drive.google.com/file/d/13jlhOhpkW-Gw9H-nWQKsyr9xre-MyYdl/view?usp=shari
 
 # 🖥 Functionalities
 ## Documents
-- Register:
-You can register the data of a document in the database.
+- Register
+    You can register the data of a document in the database.
 - Remove:
 You can delete data from a document from the database.
 - Search:
