@@ -1,17 +1,17 @@
-# 🖥 Preview
+# 📱 Preview
 
-# 🖥 About this project
+# ⁉️ About this project
 
 Application for managing Users and Documents. Contains tools for registering, removing, altering and consulting users and documents in a database.
 
-# 🖥 Why did I decide to develop this project?
+# ⭐ Why did I decide to develop this project?
 I am majoring in Computer Science and, in my institute [ICOMP](https://icomp.ufam.edu.br/), there are a series of documents (from the board, coordinators and professors) that need to be cataloged and managed. These documents are routinely consulted, but performing this task manually takes a lot of time. So, a document control and management system is needed to register these available documents and allow quick and easy access to them.
 That said, this project is part of my personal portfolio and aims to solve this problem for my institute. However, it can also be reused for any other application within that context.
 
-# 🖥 Installers
-If you want to test the app, the Android installer is below: [Jfinder.apk](https://drive.google.com/file/d/13jlhOhpkW-Gw9H-nWQKsyr9xre-MyYdl/view?usp=sharing).
+# 📱 Installers
+If you want to test the app, the Android installer is below: [Jfinder.apk](https://drive.google.com/file/d/13jlhOhpkW-Gw9H-nWQKsyr9xre-MyYdl/view?usp=sharing)
 
-# 🖥 Functionalities
+# 🚀 Functionalities
 ## Documents
 - **Register**
   - You can register the data of a document in the database.
