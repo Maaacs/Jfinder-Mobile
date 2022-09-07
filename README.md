@@ -16,26 +16,26 @@ https://drive.google.com/file/d/13jlhOhpkW-Gw9H-nWQKsyr9xre-MyYdl/view?usp=shari
 ## Documents
 - Register
   - You can register the data of a document in the database.
-- Remove:
-You can delete data from a document from the database.
-- Search:
-You can search for a document in the database.
-- Change:
-You can change the data of a document in the database.
+- Remove
+  - You can delete data from a document from the database.
+- Search
+  - You can search for a document in the database.
+- Change
+  - You can change the data of a document in the database.
 ## Users
-- Register:
-You can register a user's data in the database.
-- Remove:
-You can delete a user's data from the database.
-- Search:
-You can search for a user in the database.
-- Change:
-You can change a user's data in the database.
+- Register
+  - You can register a user's data in the database.
+- Remove
+  - You can delete a user's data from the database.
+- Search
+  - You can search for a user in the database.
+- Change
+  - You can change a user's data in the database.
 ## Reports
-- Documents:
-Get a list of all documents and, if you wish, you can filter it by year, interested, document type or keyword.
-- Users:
-Gets a list of all users and, if desired, can filter it by first name, last name or title.
+- Documents
+  - Get a list of all documents and, if you wish, you can filter it by year, interested, document type or keyword.
+- Users
+  - Gets a list of all users and, if desired, can filter it by first name, last name or title.
 
 
 ![Presentation](https://user-images.githubusercontent.com/56925726/187089525-6dbb281d-1451-428b-907b-1a66d2fb70d7.png)
