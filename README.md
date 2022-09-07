@@ -37,3 +37,7 @@ If you want to test the app, the Android installer is below: [Jfinder.apk](https
 - **Users**
   - Gets a list of all users and, if desired, can filter it by first name, last name or title.
 
+## 📱 Some observations
+- Application does not support night mode
+- Application does not support screen rotation
+
