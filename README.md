@@ -1,7 +1,7 @@
 ## 📱 Preview
 ![App](https://user-images.githubusercontent.com/56925726/188957748-e1196c89-f5b8-426a-89fa-8a8e4e51f21b.png)
 
-## ⁉️ About this project
+## About this project
 
 Application for managing Users and Documents. Contains tools for registering, removing, altering and consulting users and documents in a database.
 
