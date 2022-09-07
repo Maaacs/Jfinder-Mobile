@@ -44,8 +44,8 @@ public class BancoDeDados extends SQLiteOpenHelper {
     }
 
     public boolean Login(String username, String password){
-        String user = "max";
-        String pass = "1";
+        String user = "user";
+        String pass = "123";
         if(username.equals(user) && password.equals(pass)){
             return true;
         }else{

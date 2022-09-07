@@ -63,7 +63,9 @@
     <EditText
         android:id="@+id/numeroReferencia"
         style="@style/Edit_Text"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="156dp"
+        android:layout_marginEnd="20dp"
         android:autofillHints=""
         android:hint="@string/numeroUnicoReferencia"
         android:inputType="number"
@@ -75,7 +77,9 @@
     <EditText
         android:id="@+id/tipoDeDocumento"
         style="@style/Edit_Text"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
         android:hint="@string/tipoDeDocumento"
         android:inputType="text"
         android:minHeight="48dp"
@@ -87,7 +91,9 @@
     <EditText
         android:id="@+id/interessado"
         style="@style/Edit_Text"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
         android:hint="@string/interessado"
         android:inputType="text"
         android:minHeight="48dp"
@@ -98,7 +104,9 @@
     <EditText
         android:id="@+id/tipoDeArmazenamento"
         style="@style/Edit_Text"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
         android:hint="@string/tipoDeArmazenamento"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -109,9 +117,11 @@
     <EditText
         android:id="@+id/dataArquivamento"
         style="@style/Edit_Text"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:hint="@string/dataArquivamento"
-        android:minHeight="48dp"
         android:inputType="date"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tipoDeArmazenamento" />
@@ -119,7 +129,9 @@
     <EditText
         android:id="@+id/localDeArmazenamento"
         style="@style/Edit_Text"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
         android:hint="@string/localCompletoDeArmazenamento"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -129,7 +141,9 @@
     <EditText
         android:id="@+id/descricaoDocumento"
         style="@style/Edit_Text_descricao"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
         android:hint="@string/descriçãoDocumento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -138,6 +152,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnInsert"
         style="@style/botoes"
+        android:layout_marginTop="40dp"
         android:layout_marginBottom="36dp"
         android:onClick="bntInserir"
         android:text="@string/cadastrar"
@@ -146,6 +161,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descricaoDocumento"
         tools:ignore="OnClick" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

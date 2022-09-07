@@ -38,7 +38,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botao_buscar"
         style="@style/botoes"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="20dp"
         android:onClick="consultaPorDiferentesEntradas"
         android:text="@string/buscar"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,7 +52,7 @@
         android:id="@+id/spinnerDocumentos"
         android:layout_width="190dp"
         android:layout_height="34dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/spinner_custom"
         android:dropDownWidth="match_parent"
@@ -64,7 +64,7 @@
     <EditText
         android:id="@+id/itemBusca"
         style="@style/Edit_Text_Compact2"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="20dp"
         android:hint="@string/insira"
         android:inputType="text"
         android:maxLength="11"

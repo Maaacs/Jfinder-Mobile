@@ -1,5 +1,6 @@
 package com.example.jfinder_mobile;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -22,6 +23,7 @@ public class FragmentUsuarios extends Fragment {
     public FragmentUsuarios() {
         // Required empty public constructor
     }
+
 
     public static FragmentUsuarios newInstance(String param1, String param2) {
         FragmentUsuarios fragment = new FragmentUsuarios();
@@ -47,6 +49,7 @@ public class FragmentUsuarios extends Fragment {
     @Override /* Sair de um fragment para uma class*/
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_usuarios, container, false);
+
 
         Button cadastrarBotao = (Button)view.findViewById(R.id.cadastrar);
         Button removerBotao = (Button)view.findViewById(R.id.remover);
@@ -96,6 +99,8 @@ public class FragmentUsuarios extends Fragment {
 
         return view;
     }
+
+
 
 
 }

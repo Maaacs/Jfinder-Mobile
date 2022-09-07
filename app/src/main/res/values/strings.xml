@@ -68,7 +68,7 @@
     <string name="Jfinder">Jfinder</string>
     <string name="todo">TODO</string>
     <string name="insira">Insira a busca</string>
-    <string name="descricao">Aplicação para gerenciamento de Usuários e Documentos. Contém ferramentas para cadastro, remoção, alteração e consulta de usuários e documentos em um banco de dados.</string>
+    <string name="descricao">Aplicação para gerenciamento de Usuários e Documentos. Contém ferramentas para cadastro, remoção, alteração e consulta de usuários e documentos em um banco de dados. Usuario: user Senha: 123</string>
 
 
 </resources>
