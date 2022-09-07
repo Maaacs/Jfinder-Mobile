@@ -54,7 +54,7 @@ o celular-->
         <EditText
             android:id="@+id/edit_usuario"
             style="@style/Edit_Text"
-            android:drawableEnd="@drawable/user_account"
+            android:drawableEnd="@drawable/userlogincion2"
             android:hint="@string/usuario"
             android:inputType="text"
             android:minHeight="48dp"
@@ -62,11 +62,10 @@ o celular-->
             app2:layout_constraintEnd_toStartOf="@id/containerComponents"
             app2:layout_constraintTop_toBottomOf="@+id/logoUsuario"
             android:autofillHints="" />
-
         <EditText
             android:id="@+id/edit_senha"
             style="@style/Edit_Text"
-            android:drawableRight="@drawable/senha_account"
+            android:drawableRight="@drawable/keylogin"
             android:hint="Senha"
             android:inputType="numberPassword"
             android:minHeight="48dp"
@@ -137,8 +136,8 @@ o celular-->
 
         <ImageView
             android:id="@+id/sobre"
-            android:layout_width="17dp"
-            android:layout_height="14dp"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
             android:backgroundTint="#FFFFFF"
             android:onClick="sobre"
             app2:layout_constraintBottom_toBottomOf="parent"
@@ -146,7 +145,8 @@ o celular-->
             app2:layout_constraintStart_toStartOf="parent"
             app2:layout_constraintTop_toTopOf="parent"
             app2:layout_constraintVertical_bias="0.926"
-            app2:srcCompat="@android:drawable/ic_dialog_info"
+
+            android:src="@drawable/aboutlogin"
             tools:ignore="OnClick" />
 
 
