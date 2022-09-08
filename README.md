@@ -1,4 +1,5 @@
 ## 📱 Preview
+Here you can see all application screens [Images](https://drive.google.com/file/d/1PZjnUvZ4X2p4QYXZJxO4YjmAg8Pe3drJ/view?usp=sharing)
 ![APP (1)](https://user-images.githubusercontent.com/56925726/188965364-8da82a2d-f630-4b43-9b8c-4fca8603756f.png)
 
 ## About this project
