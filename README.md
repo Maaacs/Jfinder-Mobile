@@ -10,7 +10,7 @@ I am majoring in Computer Science and, in my institute (ICOMP), there are a seri
 That said, this project is part of my personal portfolio and aims to solve this problem for my institute. However, it can also be reused for any other application within that context. I also developed a desktop version that can be found here [Jfinder-Desktop](https://github.com/Maaacs/Jfinder-Desktop)
 
 ## Installers
-If you want to test the app, the Android installer is below: [Jfinder.apk](https://drive.google.com/file/d/1Mck9Atd1cer4R1GGlDigb31xdPQpda0x/view?usp=sharing)
+If you want to test the app, the Android installer is below: [Jfinder.apk](https://drive.google.com/file/d/1MjBZ4tqotSF2Z8_QgpSb5VhroB1xt3Qm/view?usp=sharing)
 
 ## 🚀 Functionalities
 ### Documents
