@@ -151,7 +151,7 @@ public class UsuarioDAO {
         try {
             ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
             Usuario usr;
-            String sqlQuery = "SELECT * FROM Usuariosdb";
+            String sqlQuery = "SELECT * FROM Usuariosdb WHERE cpf = '" + cpf + "'";
             Cursor cursor = this.bancoDeDados.rawQuery(sqlQuery, null);
 
             if (cursor.moveToNext()) {
