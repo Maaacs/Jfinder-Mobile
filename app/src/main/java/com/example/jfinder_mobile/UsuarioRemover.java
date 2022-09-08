@@ -46,6 +46,13 @@ public class UsuarioRemover extends AppCompatActivity {
         } else {
             usr.removerUsuario(usuario.getCPF());
 
+            //atualizar listview assim que remover usuário
+            final ListView listaDeUsuarios = (ListView) findViewById(R.id.lista);
+            final ArrayList<Usuario> listaUsuarios = usr.todosUsuarios();
+            ArrayAdapter<Usuario> arrayAdapter = new ArrayAdapter<Usuario>(this, android.R.layout.simple_list_item_1, listaUsuarios);
+            listaDeUsuarios.setAdapter(arrayAdapter);
+
+
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Usuário removido com sucesso!");
             builder.setMessage("Usuário: " + usuario.getPrimeiroNome() );
