@@ -73,19 +73,24 @@ public class DocumentoAlterar extends AppCompatActivity {
         String dataArquivamentoCadastra = dataArquivamentoText.getText().toString();
         String descriçãoDocumentoCadastra = descricaoText.getText().toString();
         String localCompletoDeArmazenamentoCadastra = localDeArmazenamentoText.getText().toString();
+        String numRef = num_referencia.getText().toString();
 
         DocumentoDAO d = new DocumentoDAO(this);
 
-        if (tipoDeDocumentoCadastra.matches("") || interessadoCadastra.matches("") || tipoDeArmazenamentoCadastra.matches("") || dataArquivamentoCadastra.matches("") || descriçãoDocumentoCadastra.matches("") || localCompletoDeArmazenamentoCadastra.matches("")){
-            Toast.makeText(this, "Dados incompletos!", Toast.LENGTH_SHORT).show();
-        }else{
 
-            if (d.alterarDocumento(tipoDeDocumentoText.getText().toString(), interessadoText.getText().toString(), tipoDeArmazenamentoText.getText().toString(), dataArquivamentoText.getText().toString(), localDeArmazenamentoText.getText().toString(), descricaoText.getText().toString(), num_referencia.getText().toString())) {
-                Toast.makeText(DocumentoAlterar.this, "Sucesso!", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(DocumentoAlterar.this, "Tente novamente!", Toast.LENGTH_SHORT).show();
+        if(d.buscarDocumento(numRef) != null){
+            if (tipoDeDocumentoCadastra.matches("") || interessadoCadastra.matches("") || tipoDeArmazenamentoCadastra.matches("") || dataArquivamentoCadastra.matches("") || descriçãoDocumentoCadastra.matches("") || localCompletoDeArmazenamentoCadastra.matches("")){
+                Toast.makeText(this, "Dados incompletos!", Toast.LENGTH_SHORT).show();
+            }else{
+
+                if (d.alterarDocumento(tipoDeDocumentoText.getText().toString(), interessadoText.getText().toString(), tipoDeArmazenamentoText.getText().toString(), dataArquivamentoText.getText().toString(), localDeArmazenamentoText.getText().toString(), descricaoText.getText().toString(), num_referencia.getText().toString())) {
+                    Toast.makeText(DocumentoAlterar.this, "Sucesso!", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(DocumentoAlterar.this, "Tente novamente!", Toast.LENGTH_SHORT).show();
+                }
             }
+        }else{
+            Toast.makeText(DocumentoAlterar.this, "Insira um n° referência válido e realize a busca!", Toast.LENGTH_SHORT).show();
         }
-
     }
 }
