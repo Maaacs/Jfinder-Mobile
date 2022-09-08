@@ -1,6 +1,7 @@
 ## 📱 Preview
 Here you can see all application screens [Images](https://drive.google.com/file/d/1PZjnUvZ4X2p4QYXZJxO4YjmAg8Pe3drJ/view?usp=sharing)
-![APP (1)](https://user-images.githubusercontent.com/56925726/188965364-8da82a2d-f630-4b43-9b8c-4fca8603756f.png)
+##
+![app-Jfinder](https://user-images.githubusercontent.com/56925726/189199030-d5f97a7e-6b07-4014-be25-c5ba9e70862d.png)
 
 ## About this project
 
