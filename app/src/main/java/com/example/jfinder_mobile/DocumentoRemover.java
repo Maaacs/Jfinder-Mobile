@@ -45,10 +45,15 @@ public class DocumentoRemover extends AppCompatActivity {
         } else {
             doc.removerDocumento(documento.getNumeroUnicoReferencia());
 
+            //atualizar em tempo real a listview
+            final ListView listaDeDocumentos = (ListView) findViewById(R.id.lista);
+            final ArrayList<Documento> listaDocumentos = doc.todosDocumentos();
+            ArrayAdapter<Documento> arrayAdapter = new ArrayAdapter<Documento>(this, android.R.layout.simple_list_item_1, listaDocumentos);
+            listaDeDocumentos.setAdapter(arrayAdapter);
+
+
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            //define o titulo
             builder.setTitle("Documento removido com sucesso!");
-            //define a mensagem
             builder.setMessage("Documento: " + documento.getTipoDeDocumento());
 
             builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {

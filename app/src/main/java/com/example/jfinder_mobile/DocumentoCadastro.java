@@ -59,7 +59,7 @@ public class DocumentoCadastro extends AppCompatActivity {
                 alerta.show();
 
             }else{
-                Toast.makeText(DocumentoCadastro.this, "Tente novamente!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DocumentoCadastro.this, "N° de referência já cadastrado!", Toast.LENGTH_SHORT).show();
             }
         }
 
