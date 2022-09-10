@@ -35,7 +35,7 @@ public class UsuarioCadastro extends AppCompatActivity {
 
         if (nome.matches("") || sobrenome.matches("") || cpf.matches("") || cargo.matches("")){
             Toast.makeText(this, "Dados não preenchidos!", Toast.LENGTH_SHORT).show();
-        }else{
+        }else if (cpf.length() == 11){
             if (uDAO.addUsuario(usuarios)){//adiciona produto em uDAO
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Cadastro realizado com sucesso!");
@@ -52,6 +52,8 @@ public class UsuarioCadastro extends AppCompatActivity {
             }else {
                 Toast.makeText(UsuarioCadastro.this, "CPF já cadastrado!", Toast.LENGTH_SHORT).show();
             }
+        }else{
+            Toast.makeText(UsuarioCadastro.this, "Insira um CPF válido!", Toast.LENGTH_SHORT).show();
         }
 
 
