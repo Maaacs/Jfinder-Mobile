@@ -23,13 +23,12 @@ public class DocumentoBuscar extends AppCompatActivity {
 
 
     public ArrayList<Documento> consultar(View view) {
-        DocumentoDAO doc = new DocumentoDAO(this);
+
         EditText itemBusca = (EditText) findViewById(R.id.num_referencia);
         String itemAserBuscado = itemBusca.getText().toString();
-        System.out.println(itemAserBuscado);
 
             if (itemAserBuscado.matches("")) {
-                Toast.makeText(this, "Insira a busca!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Insira o n° de referência!", Toast.LENGTH_SHORT).show();
             } else {
 
                 DocumentoDAO docDAO = new DocumentoDAO(this);
@@ -40,9 +39,9 @@ public class DocumentoBuscar extends AppCompatActivity {
                 listaDeDocumentos.setAdapter(arrayAdapter);
 
                 if (docDAO.buscarDocumentoLista(itemAserBuscado).size() >= 1) {
-                    Toast.makeText(this, "Resultados encontrados!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Documento encontrado!", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(this, "Resultados não encontrados!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Documento não encontrado!", Toast.LENGTH_SHORT).show();
                 }
             }
         return null;

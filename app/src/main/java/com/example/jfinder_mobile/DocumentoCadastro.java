@@ -37,16 +37,15 @@ public class DocumentoCadastro extends AppCompatActivity {
         String descriçãoDocumentoCadastra = descriçãoDocumentoTXT.getText().toString();
         String localCompletoDeArmazenamentoCadastra = localCompletoDeArmazenamentoTXT.getText().toString();
 
-        String virt = "Virtual";
-
         Documento documentos = new Documento(numeroUnicoReferenciaTXT.getText().toString(), tipoDeDocumentoTXT.getText().toString(), interessadoTXT.getText().toString(), tipoDeArmazenamentoTXT.getText().toString(), dataArquivamentoTXT.getText().toString(), descriçãoDocumentoTXT.getText().toString(), localCompletoDeArmazenamentoTXT.getText().toString());
         DocumentoDAO dDAO = new DocumentoDAO(this);
+
 
         if (numeroUnicoReferenciaCadastra.matches("") || tipoDeDocumentoCadastra.matches("") || interessadoCadastra.matches("") || tipoDeArmazenamentoCadastra.matches("") || dataArquivamentoCadastra.matches("") || descriçãoDocumentoCadastra.matches("") || localCompletoDeArmazenamentoCadastra.matches("")) {
             Toast.makeText(this, "Dados incompletos!", Toast.LENGTH_SHORT).show();
         }
         else if((tipoDeArmazenamentoCadastra.equals("virtual") || tipoDeArmazenamentoCadastra.equals("fisico") || tipoDeArmazenamentoCadastra.equals("Virtual")) || tipoDeArmazenamentoCadastra.equals("Fisico") || tipoDeArmazenamentoCadastra.equals("Físico") || tipoDeArmazenamentoCadastra.equals("físico")){
-            
+
             if(dDAO.addDocumento(documentos)){
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Documento adicionado com sucesso!");
