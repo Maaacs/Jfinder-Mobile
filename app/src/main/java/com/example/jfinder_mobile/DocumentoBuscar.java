@@ -21,24 +21,57 @@ public class DocumentoBuscar extends AppCompatActivity {
         getSupportActionBar().hide(); // esconde a barra de título do app (toolbar)
     }
 
-    public void btnbuscar(View view) {
+
+    public ArrayList<Documento> consultar(View view) {
+        DocumentoDAO doc = new DocumentoDAO(this);
+        EditText itemBusca = (EditText) findViewById(R.id.num_referencia);
+        String itemAserBuscado = itemBusca.getText().toString();
+        System.out.println(itemAserBuscado);
+
+            if (itemAserBuscado.matches("")) {
+                Toast.makeText(this, "Insira a busca!", Toast.LENGTH_SHORT).show();
+            } else {
+
+                DocumentoDAO docDAO = new DocumentoDAO(this);
+                final ListView listaDeDocumentos = (ListView) findViewById(R.id.lista);
+                final ArrayList<Documento> listaDocumentos = docDAO.buscarDocumentoLista(itemAserBuscado);
+
+                ArrayAdapter<Documento> arrayAdapter = new ArrayAdapter<Documento>(this, android.R.layout.simple_list_item_1, listaDocumentos);
+                listaDeDocumentos.setAdapter(arrayAdapter);
+
+                if (docDAO.buscarDocumentoLista(itemAserBuscado).size() >= 1) {
+                    Toast.makeText(this, "Resultados encontrados!", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "Resultados não encontrados!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        return null;
+    }
+
+}
+
+
+
+
+
+/*    public void btnbuscar(View view) {
         EditText Nreferencia = (EditText) findViewById(R.id.num_referencia);
 
-/*        TextView tipoDeDocumentoText = (TextView) findViewById(R.id.tipoDeDocumentoText);
+        TextView tipoDeDocumentoText = (TextView) findViewById(R.id.tipoDeDocumentoText);
         TextView interessadoText = (TextView) findViewById(R.id.interessadoText);
         TextView tipoDeArmazenamentoText = (TextView) findViewById(R.id.tipoDeArmazenamentoText);
         TextView dataArquivamentoText = (TextView) findViewById(R.id.dataArquivamentoText);
         TextView localDeArmazenamentoText = (TextView) findViewById(R.id.localDeArmazenamentoText);
-        TextView descricaoText = (TextView) findViewById(R.id.descricaoText);*/
+        TextView descricaoText = (TextView) findViewById(R.id.descricaoText);
 
         String NumeRefBusca = Nreferencia.getText().toString();
-/*        String numeroUnicoReferenciaCadastra = Nreferencia.getText().toString();
+        String numeroUnicoReferenciaCadastra = Nreferencia.getText().toString();
         String tipoDeDocumentoCadastra = tipoDeDocumentoText.getText().toString();
         String interessadoCadastra = interessadoText.getText().toString();
         String tipoDeArmazenamentoCadastra = tipoDeArmazenamentoText.getText().toString();
         String dataArquivamentoCadastra = dataArquivamentoText.getText().toString();
         String descriçãoDocumentoCadastra = descricaoText.getText().toString();
-        String localCompletoDeArmazenamentoCadastra = localDeArmazenamentoText.getText().toString();*/
+        String localCompletoDeArmazenamentoCadastra = localDeArmazenamentoText.getText().toString();
 
         String num_referencia = Nreferencia.getText().toString();
         DocumentoDAO d = new DocumentoDAO(this);
@@ -48,23 +81,23 @@ public class DocumentoBuscar extends AppCompatActivity {
             Toast.makeText(this, "Insira o N° de referência!", Toast.LENGTH_SHORT).show();
         }else{
             if (doc == null) {
-/*                tipoDeDocumentoText.setText("Não encontrado");
+                tipoDeDocumentoText.setText("Não encontrado");
                 interessadoText.setText("Não encontrado");
                 tipoDeArmazenamentoText.setText("Não encontrado");
                 dataArquivamentoText.setText("--/--/--");
                 localDeArmazenamentoText.setText("Não encontrado");
-                descricaoText.setText("Não encontrado");*/
+                descricaoText.setText("Não encontrado");
 
                 Toast.makeText(this, "Documento não encontrado!", Toast.LENGTH_SHORT).show();
 
             } else {
 
-/*                tipoDeDocumentoText.setText(doc.getTipoDeDocumento());
+                tipoDeDocumentoText.setText(doc.getTipoDeDocumento());
                 interessadoText.setText(doc.getInteressado());
                 tipoDeArmazenamentoText.setText(doc.getTipoDeArmazenamento());
                 dataArquivamentoText.setText(doc.getDataArquivamento());
                 localDeArmazenamentoText.setText(doc.getLocalCompletoDeArmazenamento());
-                descricaoText.setText(doc.getDescriçãoDocumento());*/
+                descricaoText.setText(doc.getDescriçãoDocumento());
 
 
                 EditText N_referencia = (EditText) findViewById(R.id.num_referencia);
@@ -81,8 +114,4 @@ public class DocumentoBuscar extends AppCompatActivity {
 
             }
         }
-
-
-
-    }
-}
+    }*/
